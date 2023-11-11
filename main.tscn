@@ -1,0 +1,152 @@
+[gd_scene load_steps=16 format=3 uid="uid://50yxepykt28g"]
+
+[ext_resource type="Texture2D" uid="uid://cytn0bpmyj0ou" path="res://Sprites/Character_1Bit.png" id="1_8co1o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5hxj"]
+atlas = ExtResource("1_8co1o")
+region = Rect2(0, 11, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gysdt"]
+atlas = ExtResource("1_8co1o")
+region = Rect2(16, 11, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10weu"]
+atlas = ExtResource("1_8co1o")
+region = Rect2(128, 11, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwdu1"]
+atlas = ExtResource("1_8co1o")
+region = Rect2(144, 11, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlw34"]
+atlas = ExtResource("1_8co1o")
+region = Rect2(160, 11, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nk6p8"]
+atlas = ExtResource("1_8co1o")
+region = Rect2(176, 11, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83ygx"]
+atlas = ExtResource("1_8co1o")
+region = Rect2(64, 11, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jfd7"]
+atlas = ExtResource("1_8co1o")
+region = Rect2(80, 11, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wigh"]
+atlas = ExtResource("1_8co1o")
+region = Rect2(96, 11, 16, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqee6"]
+atlas = ExtResource("1_8co1o")
+region = Rect2(112, 11, 16, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_13224"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d5hxj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gysdt")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10weu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lwdu1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlw34")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nk6p8")
+}],
+"loop": true,
+"name": &"walk_back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83ygx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jfd7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3wigh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gqee6")
+}],
+"loop": true,
+"name": &"walk_font",
+"speed": 4.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qxkar"]
+
+[sub_resource type="Animation" id="Animation_tdb33"]
+resource_name = "idle"
+length = 0.45
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8ec10"]
+_data = {
+"idle": SubResource("Animation_tdb33")
+}
+
+[node name="Main" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -3.00003
+offset_top = -30.0
+offset_right = 37.0
+offset_bottom = 10.0
+scale = Vector2(29.065, 17.0786)
+color = Color(0, 0, 0, 1)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(156, 143)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(115, 85.5)
+sprite_frames = SubResource("SpriteFrames_13224")
+animation = &"walk_font"
+autoplay = "idle"
+frame_progress = 0.549822
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(115, 85.5)
+shape = SubResource("CapsuleShape2D_qxkar")
+disabled = true
+one_way_collision_margin = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(148, 80)
+texture = ExtResource("1_8co1o")
+hframes = 19
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D/Sprite2D"]
+autoplay = "idle"
+libraries = {
+"": SubResource("AnimationLibrary_8ec10")
+}
