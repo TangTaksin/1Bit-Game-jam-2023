@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7i8an15v0f81"
-path="res://.godot/imported/XC1_tension_icon_Shulk_high.png-5e9150dca41d08206e9b80c42d21c5b9.ctex"
+uid="uid://cjfyvegcajwxo"
+path="res://.godot/imported/lamp_temp.png-e99df56b504150ac9f33c1eff8c13506.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://XC1_tension_icon_Shulk_high.png"
-dest_files=["res://.godot/imported/XC1_tension_icon_Shulk_high.png-5e9150dca41d08206e9b80c42d21c5b9.ctex"]
+source_file="res://Sprites/lamp_temp.png"
+dest_files=["res://.godot/imported/lamp_temp.png-e99df56b504150ac9f33c1eff8c13506.ctex"]
 
 [params]
 

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bk7pjefu2apm3"]
+
+[ext_resource type="Texture2D" uid="uid://di4rqava3lptf" path="res://Sprites/gloves_temp.png" id="1_lu4te"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.gd" id="2_kkikn"]
+
+[resource]
+script = ExtResource("2_kkikn")
+itemname = "Hammer"
+image = ExtResource("1_lu4te")

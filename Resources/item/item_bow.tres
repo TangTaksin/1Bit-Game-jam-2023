@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cwab2mvven5qy"]
+
+[ext_resource type="Texture2D" uid="uid://dh8nhb45i5fww" path="res://Sprites/bow_temp.png" id="1_aiuow"]
+[ext_resource type="Script" path="res://Scripts/Items/Item.gd" id="2_v8147"]
+
+[resource]
+script = ExtResource("2_v8147")
+itemname = "Bow"
+image = ExtResource("1_aiuow")
