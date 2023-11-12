@@ -248,6 +248,8 @@ offset_left = 272.0
 offset_top = 15.0
 offset_right = -15.0
 offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ItemIcon8" type="TextureRect" parent="Panel/Panel"]
 texture_filter = 1

@@ -17,3 +17,9 @@ texture = ExtResource("2_r7pil")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_alb1m")
+
+[node name="ActionCoolDown" type="Timer" parent="."]
+wait_time = 0.25
+one_shot = true
+
+[connection signal="timeout" from="ActionCoolDown" to="." method="_on_action_cool_down_timeout"]
