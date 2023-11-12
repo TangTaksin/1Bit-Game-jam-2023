@@ -1,12 +1,11 @@
 extends CharacterBody2D
-class_name PlayerCharacter
+class_name Player
 
 @export var speed: float = 300
 @export var has_acceleration: = false
 @export var acceleration: = 1000
 @export var deacceleration: = 1000
 var facing := Vector2.DOWN
-var carried_object = null
 
 @onready var anim_sprite: AnimatedSprite2D = $AnimatedSprite2D as AnimatedSprite2D
 

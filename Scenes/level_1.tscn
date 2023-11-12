@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dgyi8xfd56ild"]
 
 [ext_resource type="Texture2D" uid="uid://cags46glknww2" path="res://Asset Pack 1-bit/Tilesets/1Bit_Tilesets.png" id="1_36x8l"]
-[ext_resource type="PackedScene" uid="uid://dgefww6k4pglr" path="res://Asset Pack 1-bit/porps/pot.tscn" id="2_dullc"]
+[ext_resource type="PackedScene" uid="uid://tsj004j75gfg" path="res://Asset Pack 1-bit/porps/pot.tscn" id="2_dullc"]
 [ext_resource type="PackedScene" uid="uid://c8jiqst6edjxb" path="res://Scenes/player.tscn" id="2_i3p1t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o7tla"]
@@ -278,7 +278,7 @@ texture = ExtResource("1_36x8l")
 0:5/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSet" id="TileSet_k1rj1"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 4
 sources/0 = SubResource("TileSetAtlasSource_o7tla")
 
 [node name="Level1" type="Node2D"]
