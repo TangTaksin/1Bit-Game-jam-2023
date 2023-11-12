@@ -298,6 +298,9 @@ layer_1/tile_data = PackedInt32Array(589837, 327680, 2, 589838, 327680, 2, 58983
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("2_i3p1t")]
 position = Vector2(325, 193)
+has_acceleration = null
+acceleration = null
+deacceleration = null
 
 [node name="pot" parent="." instance=ExtResource("2_dullc")]
 position = Vector2(386, 184)

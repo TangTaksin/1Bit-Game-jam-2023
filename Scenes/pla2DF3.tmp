@@ -160,6 +160,9 @@ y_sort_enabled = true
 collision_mask = 6
 script = ExtResource("1_4cn0g")
 speed = 100.0
+has_acceleration = null
+acceleration = null
+deacceleration = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_h7mh7")
@@ -174,10 +177,10 @@ shape = SubResource("RectangleShape2D_d6oqv")
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 
-[node name="InteractionArea" type="Area2D" parent="."]
+[node name="interactCheck" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactCheck"]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_0ryj0")
