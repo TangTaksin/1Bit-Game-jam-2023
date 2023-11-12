@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://50yxepykt28g"]
+
+[ext_resource type="PackedScene" uid="uid://c8jiqst6edjxb" path="res://Scenes/player.tscn" id="1_yx8ba"]
+[ext_resource type="PackedScene" uid="uid://u2vx5sbf1nug" path="res://Scenes/box.tscn" id="2_m44mu"]
+
+[node name="Main" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+texture_filter = 1
+offset_left = -6052.0
+offset_top = -5827.0
+offset_right = -6012.0
+offset_bottom = -5787.0
+scale = Vector2(305.986, 1192.65)
+color = Color(0.109804, 0.109804, 0.109804, 1)
+
+[node name="PlayerCharacter" parent="." instance=ExtResource("1_yx8ba")]
+light_mask = 2
+visibility_layer = 7
+position = Vector2(488, 310)
+
+[node name="Box" parent="." instance=ExtResource("2_m44mu")]
+position = Vector2(514, 314)
+collision_layer = 2
+collision_mask = 7
+linear_damp_mode = 1
+linear_damp = 40.0
+
+[node name="Box2" parent="." instance=ExtResource("2_m44mu")]
+position = Vector2(554, 295)
+collision_layer = 2
+collision_mask = 7
+can_sleep = true
+
+[node name="Box3" parent="." instance=ExtResource("2_m44mu")]
+position = Vector2(555, 332)
+collision_layer = 2
+collision_mask = 7
+can_sleep = true
+linear_damp_mode = 1
+linear_damp = 40.0
+
+[node name="Box4" parent="." instance=ExtResource("2_m44mu")]
+position = Vector2(589, 312)
+collision_layer = 2
+collision_mask = 7
+can_sleep = true
+linear_damp_mode = 1
+linear_damp = 40.0
+
+[node name="Box5" parent="." instance=ExtResource("2_m44mu")]
+position = Vector2(516, 356)
+collision_layer = 2
+collision_mask = 7
+can_sleep = true
+linear_damp_mode = 1
+linear_damp = 40.0
