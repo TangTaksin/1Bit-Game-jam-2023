@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://de1x1cttwbanb"]
+
+[ext_resource type="PackedScene" uid="uid://btimk30n08fqj" path="res://Scenes/Player.tscn" id="1_1o02m"]
+[ext_resource type="PackedScene" uid="uid://be46finlr4h25" path="res://Scenes/Interface.tscn" id="2_amu40"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("1_1o02m")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Interface" parent="CanvasLayer" instance=ExtResource("2_amu40")]
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 7.0
+offset_bottom = 5.0
