@@ -5,52 +5,83 @@ class_name Player
 @export var has_acceleration = false
 @export var acceleration = 1000
 @export var deacceleration = 1000
-var facing = Vector2.DOWN
+@export var inventory : Inventory
+
+var playerFacing : Vector2 = Vector2.UP
+var direction : Vector2
 
 var carried_item: Node2D = null
 
+var CanAct : bool = true
+
+@onready var actionCD : Timer = $ActionCoolDown
 @onready var anim_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var interaction_area: Area2D = $InteractionArea
 
 func _physics_process(delta: float) -> void:	
-	handleInput(delta)
-	move_and_slide()
+	
 	handleAnimation()
 	handleInteraction()
+	
 	if carried_item != null:
 		carried_item.global_position = global_position + Vector2(0, -19)
-		
-
-func handleInput(delta):
-	var input := Input.get_vector("move_left", "move_right", "move_up", "move_down").normalized()
+	
 	if has_acceleration:
-		if input.length() == 0.0:
+		if direction.length() == 0.0:
 			velocity = velocity.move_toward(Vector2.ZERO, deacceleration * delta)
-			
 		else:
-			velocity = velocity.move_toward(input * speed, acceleration * delta)
+			velocity = velocity.move_toward(direction * speed, acceleration * delta)
 	else:
-		velocity = velocity.move_toward(input * speed, acceleration * delta)
-	facing = input.normalized()
+		velocity = velocity.move_toward(direction * speed, acceleration * delta)
+	
+	if !inventory.invIsUp and CanAct :
+		move_and_slide()
+		if Input.is_action_just_pressed("Use_Item") :
+			CanAct = false
+			actionCD.start()
+			UseItem(playerFacing)
+
+func _input(event: InputEvent) -> void:
+	var x = Input.get_axis("ui_left", "ui_right");
+	var y = Input.get_axis("ui_up", "ui_down")
+	direction = Vector2(x, y).normalized()
+	
+	if event.is_action_pressed("ui_up") :
+		playerFacing = Vector2.UP
+	if event.is_action_pressed("ui_down") :
+		playerFacing = Vector2.DOWN
+	if event.is_action_pressed("ui_left") :
+		playerFacing = Vector2.LEFT
+	if event.is_action_pressed("ui_right") :
+		playerFacing = Vector2.RIGHT
+
 
 func handleAnimation():
-	if velocity.x < 0:
-		anim_sprite.animation = "walk_side"
-		anim_sprite.flip_h = true
-	elif velocity.x > 0:
-		anim_sprite.animation = "walk_side"
-		anim_sprite.flip_h = false
-	elif velocity.y < 0:
-		anim_sprite.animation = "walk_up"
-	elif velocity.y > 0:
-		anim_sprite.animation = "walk_down"
-	else:
-		if anim_sprite.animation == "walk_side":
+	if playerFacing == Vector2.LEFT:
+		if velocity.length() > 0 :
+			anim_sprite.animation = "walk_side"
+			anim_sprite.flip_h = true
+		else :
 			anim_sprite.animation = "idle_side"
-		elif anim_sprite.animation == "walk_up":
+			anim_sprite.flip_h = true
+	if playerFacing == Vector2.RIGHT:
+		if velocity.length() > 0 :
+			anim_sprite.animation = "walk_side"
+			anim_sprite.flip_h = false
+		else :
+			anim_sprite.animation = "idle_side"
+			anim_sprite.flip_h = false
+	if playerFacing == Vector2.UP:
+		if velocity.length() > 0 :
+			anim_sprite.animation = "walk_up"
+		else :
 			anim_sprite.animation = "idle_up"
-		elif anim_sprite.animation == "walk_down":
+	if playerFacing == Vector2.DOWN:
+		if velocity.length() > 0 :
+			anim_sprite.animation = "walk_down"
+		else :
 			anim_sprite.animation = "idle_down"
+
 
 func handleInteraction():
 	if Input.is_action_just_pressed("interact"):
@@ -71,7 +102,6 @@ func handleInteraction():
 	if carried_item != null:
 		print("Carrying item:", carried_item)
 		# You can add more logic here if needed while the player is carrying an item.
-
 
 func pickUpItem(item: Node2D):
 	
@@ -101,8 +131,8 @@ func dropItem():
 		carried_item.set_physics_process(true)
 		# Store the position before removing the carried item as a child
 		var droppedItemPosition = global_position
-		var dropDirection = facing.normalized()
-		carried_item.global_position = droppedItemPosition + dropDirection * 20
+		var dropDirection = playerFacing.normalized()
+		carried_item.global_position = droppedItemPosition + dropDirection * 15
 		carried_item.reparent(get_parent())
 		
 		# Reset the carried_item variable
@@ -113,3 +143,13 @@ func dropItem():
 	else:
 		print("No item to drop")
 
+func UseItem(dir :Vector2):
+	var prefab = inventory.itemList[inventory.currentItemIndex].use(dir)
+	if prefab != null :
+		prefab.position = global_position
+		get_parent().add_child(prefab)
+	pass
+
+func _on_active_cool_down_timeout() -> void:
+	CanAct = true
+	pass # Replace with function body.

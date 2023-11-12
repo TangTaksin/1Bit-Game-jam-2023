@@ -1,7 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://c8jiqst6edjxb"]
+[gd_scene load_steps=23 format=3 uid="uid://c8jiqst6edjxb"]
 
 [ext_resource type="Script" path="res://Scripts/playerCharacter.gd" id="1_4cn0g"]
 [ext_resource type="Texture2D" uid="uid://cytn0bpmyj0ou" path="res://Asset Pack 1-bit/Character_Sprite/Character_1Bit.png" id="2_dqw5k"]
+[ext_resource type="Resource" uid="uid://5vythd7dhowv" path="res://Resources/inventory.tres" id="2_twces"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pasl6"]
 atlas = ExtResource("2_dqw5k")
@@ -160,6 +161,7 @@ y_sort_enabled = true
 collision_mask = 6
 script = ExtResource("1_4cn0g")
 speed = 100.0
+inventory = ExtResource("2_twces")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_h7mh7")
@@ -181,3 +183,7 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_0ryj0")
+
+[node name="ActionCoolDown" type="Timer" parent="."]
+
+[connection signal="timeout" from="ActionCoolDown" to="." method="_on_active_cool_down_timeout"]

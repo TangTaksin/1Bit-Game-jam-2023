@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dgyi8xfd56ild"]
+[gd_scene load_steps=7 format=3 uid="uid://dgyi8xfd56ild"]
 
 [ext_resource type="Texture2D" uid="uid://cags46glknww2" path="res://Asset Pack 1-bit/Tilesets/1Bit_Tilesets.png" id="1_36x8l"]
 [ext_resource type="PackedScene" uid="uid://tsj004j75gfg" path="res://Asset Pack 1-bit/porps/pot.tscn" id="2_dullc"]
-[ext_resource type="PackedScene" uid="uid://c8jiqst6edjxb" path="res://Scenes/player.tscn" id="2_i3p1t"]
+[ext_resource type="PackedScene" uid="uid://c8jiqst6edjxb" path="res://Scenes/Player.tscn" id="2_i3p1t"]
+[ext_resource type="PackedScene" uid="uid://be46finlr4h25" path="res://Scenes/Interface.tscn" id="4_r1vd7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o7tla"]
 texture = ExtResource("1_36x8l")
@@ -307,3 +308,7 @@ position = Vector2(229, 202)
 
 [node name="pot3" parent="." instance=ExtResource("2_dullc")]
 position = Vector2(406, 235)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Interface" parent="CanvasLayer" instance=ExtResource("4_r1vd7")]
