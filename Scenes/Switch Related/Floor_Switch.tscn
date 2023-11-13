@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://blaugecl075wf"]
+
+[ext_resource type="Script" path="res://Scripts/Switch Related/Switch_Floor.gd" id="1_1co13"]
+[ext_resource type="Texture2D" uid="uid://d8vbbmievhpd" path="res://Sprites/switch_blue.png" id="2_qe7pv"]
+[ext_resource type="Texture2D" uid="uid://lw0s80grbaxe" path="res://Sprites/switch_red.png" id="3_00mcx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5d4yp"]
+size = Vector2(16, 16)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_1co13")
+on_Sprite = ExtResource("2_qe7pv")
+off_Sprite = ExtResource("3_00mcx")
+
+[node name="switch_sprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_qe7pv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5d4yp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
