@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://baktvg0711cqy"]
+
+[ext_resource type="Script" path="res://Scripts/Switch Related/Gate.gd" id="1_lh7hv"]
+[ext_resource type="Texture2D" uid="uid://dapa0iuqwnvd6" path="res://Sprites/gate_temp.png" id="2_rnu07"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c672x"]
+size = Vector2(16, 16)
+
+[node name="SimpleGate" type="Node2D"]
+script = ExtResource("1_lh7hv")
+on_Sprite = ExtResource("2_rnu07")
+
+[node name="GateSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_rnu07")
+
+[node name="GateStaticBody" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GateStaticBody"]
+shape = SubResource("RectangleShape2D_c672x")
