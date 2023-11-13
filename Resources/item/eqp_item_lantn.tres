@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cpupl3ui1dklb"]
 
-[ext_resource type="Texture2D" uid="uid://cjfyvegcajwxo" path="res://Sprites/lamp_temp.png" id="1_mj6y3"]
+[ext_resource type="Texture2D" uid="uid://tow8fgmtka1m" path="res://Asset Pack 1-bit/Items/lamp.tres" id="1_e6ikd"]
 [ext_resource type="Script" path="res://Scripts/Items/Item.gd" id="2_14ne6"]
 
 [resource]
 script = ExtResource("2_14ne6")
 itemname = "Bow"
-image = ExtResource("1_mj6y3")
+image = ExtResource("1_e6ikd")

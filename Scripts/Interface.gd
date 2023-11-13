@@ -37,11 +37,11 @@ func ToggleInventory() :
 
 func Selection() :
 	
-	if (Input.is_action_just_pressed("ui_left") or Input.is_action_just_pressed("ui_right")) :
-		var x = Input.get_axis("ui_left", "ui_right");
+	if (Input.is_action_just_pressed("move_left") or Input.is_action_just_pressed("move_right")) :
+		var x = Input.get_axis("move_left", "move_right");
 		inventory.SwitchHor(x)
 	
-	if (Input.is_action_just_pressed("ui_up") or Input.is_action_just_pressed("ui_down")) :
+	if (Input.is_action_just_pressed("move_up") or Input.is_action_just_pressed("move_down")) :
 		inventory.SwitchVir()
 	
 	pass
