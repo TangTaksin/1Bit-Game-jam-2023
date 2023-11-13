@@ -47,13 +47,17 @@ func _input(event: InputEvent) -> void:
 		playerFacing = Vector2.RIGHT
 
 func handle_movement(delta):
+	var new_direction = direction.normalized()
 	if has_acceleration:
-		if direction.length() == 0.0:
+		if new_direction.length() == 0.0:
 			velocity = velocity.move_toward(Vector2.ZERO, deacceleration * delta)
 		else:
 			velocity = velocity.move_toward(direction * speed, acceleration * delta)
 	else:
-		velocity = velocity.move_toward(direction * speed, acceleration * delta)
+		velocity = new_direction * speed
+	
+	if new_direction.length() > 0.0:
+		playerFacing = new_direction
 
 func handle_animation():
 	if playerFacing == Vector2.LEFT:
