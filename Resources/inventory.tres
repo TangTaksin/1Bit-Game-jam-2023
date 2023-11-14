@@ -8,7 +8,7 @@
 [ext_resource type="Resource" uid="uid://bk7pjefu2apm3" path="res://Resources/item/eqp_item_glove.tres" id="5_rekhw"]
 [ext_resource type="Resource" uid="uid://cekjtwolgehp4" path="res://Resources/item/eqp_item_shoe.tres" id="6_wrm8m"]
 [ext_resource type="Resource" uid="uid://cpupl3ui1dklb" path="res://Resources/item/eqp_item_lantn.tres" id="7_i3ow4"]
-[ext_resource type="Resource" uid="uid://dncdpjj0khok4" path="res://Resources/item/eqp_item_fixer.tres" id="8_py8on"]
+[ext_resource type="Resource" uid="uid://dncdpjj0khok4" path="res://Resources/item/eqp_item_wing.tres" id="8_py8on"]
 
 [resource]
 script = ExtResource("2_2ilje")

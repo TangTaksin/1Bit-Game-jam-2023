@@ -1,20 +1,20 @@
 [gd_scene load_steps=5 format=3 uid="uid://yppt2ey0tgqv"]
 
-[ext_resource type="Texture2D" uid="uid://d8vbbmievhpd" path="res://Sprites/switch_blue.png" id="1_6nhkj"]
 [ext_resource type="Script" path="res://Scripts/Switch Related/Switch.gd" id="1_nrijn"]
-[ext_resource type="Texture2D" uid="uid://lw0s80grbaxe" path="res://Sprites/switch_red.png" id="3_sslvq"]
+[ext_resource type="Texture2D" uid="uid://dq6fd023ytngj" path="res://Asset Pack 1-bit/Items/switch_on.tres" id="2_xn2br"]
+[ext_resource type="Texture2D" uid="uid://c2jag6t5q6k3y" path="res://Asset Pack 1-bit/Items/switch_off.tres" id="3_26jh5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bgy2w"]
 size = Vector2(16, 16)
 
 [node name="Hit_Switch" type="StaticBody2D"]
 script = ExtResource("1_nrijn")
-on_Sprite = ExtResource("1_6nhkj")
-off_Sprite = ExtResource("3_sslvq")
+on_Sprite = ExtResource("2_xn2br")
+off_Sprite = ExtResource("3_26jh5")
 
 [node name="switch_sprite" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("1_6nhkj")
+texture = ExtResource("3_26jh5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_bgy2w")
