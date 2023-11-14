@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cxuo7bu624b3v" path="res://Asset Pack 1-bit/porps/pot.tres" id="1_tc138"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dx224"]
+size = Vector2(12, 15)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_n3gwb"]
 radius = 7.00194
@@ -10,13 +11,17 @@ radius = 7.00194
 [node name="pot" type="StaticBody2D"]
 collision_layer = 2
 collision_mask = 3
+collision_priority = 2.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_dx224")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 1
+y_sort_enabled = true
 texture = ExtResource("1_tc138")
 hframes = 2
 

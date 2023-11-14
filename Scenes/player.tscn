@@ -153,12 +153,13 @@ animations = [{
 size = Vector2(12, 10.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ryj0"]
-size = Vector2(18, 19)
+size = Vector2(18, 23)
 
 [node name="PlayerCharacter" type="CharacterBody2D"]
-z_index = 1
+z_index = 2
 y_sort_enabled = true
 collision_mask = 6
+collision_priority = 2.0
 script = ExtResource("1_4cn0g")
 speed = 100.0
 inventory = ExtResource("2_twces")
@@ -189,7 +190,7 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
-position = Vector2(0, 5.5)
+position = Vector2(0, 3.5)
 shape = SubResource("RectangleShape2D_0ryj0")
 
 [node name="ActionCoolDown" type="Timer" parent="."]
