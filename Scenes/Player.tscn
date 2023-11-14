@@ -150,7 +150,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d6oqv"]
-size = Vector2(12, 9)
+size = Vector2(12, 10.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ryj0"]
 size = Vector2(18, 19)
@@ -170,11 +170,19 @@ autoplay = "idle_down"
 frame_progress = 0.349725
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 6)
+position = Vector2(0, 5.25)
 shape = SubResource("RectangleShape2D_d6oqv")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
+zoom = Vector2(1.5, 1.5)
+limit_left = 0
+limit_top = 0
+limit_right = 640
+limit_bottom = 360
+limit_smoothed = true
+position_smoothing_speed = 16.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
 
 [node name="InteractionArea" type="Area2D" parent="."]
 collision_layer = 0
