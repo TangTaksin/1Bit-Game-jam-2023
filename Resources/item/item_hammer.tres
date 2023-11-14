@@ -1,9 +1,9 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://6pexfa3lsr2u"]
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://6pexfa3lsr2u"]
 
-[ext_resource type="Texture2D" uid="uid://b5gxl7yuhs3jg" path="res://Asset Pack 1-bit/Items/hammer.tres" id="1_cb4d7"]
-[ext_resource type="Script" path="res://Scripts/Items/Item.gd" id="2_iwbmj"]
+[ext_resource type="Texture2D" uid="uid://c7lwux6m2ya3m" path="res://Sprites/hammer_temp.png" id="1_s3tjw"]
+[ext_resource type="Script" path="res://Scripts/Items/Item_Hammer.gd" id="2_38ou7"]
 
 [resource]
-script = ExtResource("2_iwbmj")
-itemname = "Bow"
-image = ExtResource("1_cb4d7")
+script = ExtResource("2_38ou7")
+itemname = "Hammer"
+image = ExtResource("1_s3tjw")

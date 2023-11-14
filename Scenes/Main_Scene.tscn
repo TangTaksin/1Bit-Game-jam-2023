@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://de1x1cttwbanb"]
+[gd_scene load_steps=5 format=3 uid="uid://de1x1cttwbanb"]
 
 [ext_resource type="PackedScene" uid="uid://c8jiqst6edjxb" path="res://Scenes/Player.tscn" id="1_1o02m"]
 [ext_resource type="PackedScene" uid="uid://be46finlr4h25" path="res://Scenes/Interface.tscn" id="2_amu40"]
+[ext_resource type="PackedScene" uid="uid://baktvg0711cqy" path="res://Scenes/Switch Related/SimpleGate.tscn" id="4_7q6ac"]
+[ext_resource type="PackedScene" uid="uid://blaugecl075wf" path="res://Scenes/Switch Related/Floor_Switch.tscn" id="4_jw2oq"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -16,3 +18,15 @@ offset_left = 7.0
 offset_top = 5.0
 offset_right = 7.0
 offset_bottom = 5.0
+
+[node name="VanishingGate" parent="." node_paths=PackedStringArray("connected_Switch") instance=ExtResource("4_7q6ac")]
+position = Vector2(331, -128)
+scale = Vector2(4.90718, 4.90718)
+connected_Switch = NodePath("../Area2D")
+isActivated = true
+
+[node name="Area2D" parent="." instance=ExtResource("4_jw2oq")]
+position = Vector2(337, 66)
+scale = Vector2(5.37534, 5.37534)
+isToggle = true
+switchIsOn = true

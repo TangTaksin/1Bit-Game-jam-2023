@@ -14,14 +14,17 @@ func _init(dir : Vector2 = Vector2.DOWN) -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	print(timer.time_left)
 	global_position += direction * arrowSpeed * delta
 	pass
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
-
 
 func _on_timer_timeout() -> void:
 	queue_free()
 	pass # Replace with function body.
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	print(body)
+	if body is Switch :
+		body.flipTheSwitch()
+		print("switch is flipped")
+		queue_free()
+	
