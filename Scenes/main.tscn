@@ -22,20 +22,17 @@ position = Vector2(488, 310)
 [node name="Box" parent="." instance=ExtResource("2_m44mu")]
 position = Vector2(514, 314)
 collision_layer = 2
-collision_mask = 7
 linear_damp_mode = 1
 linear_damp = 40.0
 
 [node name="Box2" parent="." instance=ExtResource("2_m44mu")]
 position = Vector2(554, 295)
 collision_layer = 2
-collision_mask = 7
 can_sleep = true
 
 [node name="Box3" parent="." instance=ExtResource("2_m44mu")]
 position = Vector2(555, 332)
 collision_layer = 2
-collision_mask = 7
 can_sleep = true
 linear_damp_mode = 1
 linear_damp = 40.0
@@ -43,7 +40,6 @@ linear_damp = 40.0
 [node name="Box4" parent="." instance=ExtResource("2_m44mu")]
 position = Vector2(589, 312)
 collision_layer = 2
-collision_mask = 7
 can_sleep = true
 linear_damp_mode = 1
 linear_damp = 40.0
@@ -51,7 +47,6 @@ linear_damp = 40.0
 [node name="Box5" parent="." instance=ExtResource("2_m44mu")]
 position = Vector2(516, 356)
 collision_layer = 2
-collision_mask = 7
 can_sleep = true
 linear_damp_mode = 1
 linear_damp = 40.0

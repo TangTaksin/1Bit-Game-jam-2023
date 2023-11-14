@@ -147,6 +147,7 @@ func drop_item():
 		var dropDirection = playerFacing.normalized()
 		carried_item.global_position = droppedItemPosition + dropDirection * DROP_ITEM_DISTANCE
 		carried_item.reparent(get_parent())
+		#remove_child(carried_item)
 
 		# Reset the carried_item variable
 		carried_item = null
