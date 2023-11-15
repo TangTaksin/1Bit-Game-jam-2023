@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Switch Related/Gate.gd" id="1_lh7hv"]
 [ext_resource type="Texture2D" uid="uid://cags46glknww2" path="res://Asset Pack 1-bit/Tilesets/1Bit_Tilesets.png" id="2_g7y5p"]
-[ext_resource type="Texture2D" uid="uid://dkggru6du6ef4" path="res://Asset Pack 1-bit/Items/gate_off.tres" id="2_xmsmr"]
+[ext_resource type="Texture2D" uid="uid://dkggru6du6ef4" path="res://Asset Pack 1-bit/Items/gate_off.tres" id="2_jkxa4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_urbyg"]
 atlas = ExtResource("2_g7y5p")
@@ -13,13 +13,13 @@ size = Vector2(16, 16)
 
 [node name="SimpleGate" type="Node2D"]
 script = ExtResource("1_lh7hv")
-on_Sprite = ExtResource("2_xmsmr")
+on_Sprite = ExtResource("2_jkxa4")
 off_Sprite = SubResource("AtlasTexture_urbyg")
 isActivated = true
 
 [node name="GateSprite" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("2_xmsmr")
+texture = ExtResource("2_jkxa4")
 
 [node name="GateStaticBody" type="StaticBody2D" parent="."]
 collision_layer = 4

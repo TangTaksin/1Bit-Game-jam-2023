@@ -6,6 +6,7 @@ class_name Switch
 @export var switchIsOn : bool = false
 
 @onready var switchSprite = $switch_sprite
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 signal switchToggle()
 
@@ -17,6 +18,7 @@ func _ready() -> void:
 
 func flipTheSwitch() : 
 	switchIsOn = !switchIsOn
+	audio_stream_player.play()
 	
 	if switchIsOn :
 		switchSprite.texture = on_Sprite

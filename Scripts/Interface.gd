@@ -7,6 +7,8 @@ class_name Interface
 @onready var curItem = $Slot/CurrentItemIcon
 
 @export var itemIcons : Array[TextureRect]
+@onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
+@onready var ui_sfx: AudioStreamPlayer = $uiSFX
 
 var panelIsUp = false
 
@@ -22,6 +24,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("Inventory") :
+		audio_player.play()
 		ToggleInventory()
 		
 	if panelIsUp :
@@ -38,10 +41,12 @@ func ToggleInventory() :
 func Selection() :
 	
 	if (Input.is_action_just_pressed("move_left") or Input.is_action_just_pressed("move_right")) :
+		ui_sfx.play()
 		var x = Input.get_axis("move_left", "move_right");
 		inventory.SwitchHor(x)
 	
 	if (Input.is_action_just_pressed("move_up") or Input.is_action_just_pressed("move_down")) :
+		ui_sfx.play()
 		inventory.SwitchVir()
 	
 	pass

@@ -24,6 +24,8 @@ var CanAct: bool = true
 @onready var actionCD: Timer = $ActionCoolDown
 @onready var anim_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var interaction_area: Area2D = $InteractionArea
+@onready var audio_player = $AudioStreamPlayer
+
 
 func _physics_process(delta: float) -> void:
 	handle_movement(delta)
@@ -32,11 +34,12 @@ func _physics_process(delta: float) -> void:
 	handle_inventory()
 
 
+
 func _input(event: InputEvent) -> void:
 	var x = Input.get_axis("move_left", "move_right");
 	var y = Input.get_axis("move_up", "move_down")
 	direction = Vector2(x, y).normalized()
-
+	
 	if event.is_action_pressed("move_up"):
 		playerFacing = Vector2.UP
 	if event.is_action_pressed("move_down"):
@@ -45,6 +48,8 @@ func _input(event: InputEvent) -> void:
 		playerFacing = Vector2.LEFT
 	if event.is_action_pressed("move_right"):
 		playerFacing = Vector2.RIGHT
+	
+	
 
 func handle_movement(delta):
 	var new_direction = direction.normalized()
@@ -115,6 +120,7 @@ func handle_inventory():
 			CanAct = false
 			actionCD.start()
 			use_item(playerFacing)
+			audio_player.play()
 
 func pick_up_item(item: Node2D):
 
@@ -125,6 +131,8 @@ func pick_up_item(item: Node2D):
 		current_parent.remove_child(carried_item)
 
 	if carried_item is StaticBody2D:
+		#playSFX
+		audio_player.play()
 		var collider: CollisionShape2D = carried_item.get_node_or_null("CollisionShape2D")  # Adjust the path if needed
 		if collider:
 			collider.set_deferred("disabled", true)
@@ -147,6 +155,8 @@ func drop_item():
 		var dropDirection = playerFacing.normalized()
 		carried_item.global_position = droppedItemPosition + dropDirection * DROP_ITEM_DISTANCE
 		carried_item.reparent(get_parent())
+		#playSFX
+		audio_player.play()
 		#remove_child(carried_item)
 
 		# Reset the carried_item variable

@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://blaugecl075wf"]
+
+[ext_resource type="Script" path="res://Scripts/Switch Related/Switch_Floor.gd" id="1_1co13"]
+[ext_resource type="Texture2D" uid="uid://c3vuljh4uma83" path="res://Asset Pack 1-bit/Items/button_on.tres" id="2_i8rh6"]
+[ext_resource type="Texture2D" uid="uid://clldpu1n3bffh" path="res://Asset Pack 1-bit/Items/button_off.tres" id="3_adj5i"]
+[ext_resource type="AudioStream" uid="uid://cesfwuokmppdo" path="res://Audio/SFX/noise channel SFX/RPGSFX - 89 noise fallen 2.ogg" id="4_iacvw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5d4yp"]
+size = Vector2(16, 16)
+
+[node name="button_switch" type="Area2D"]
+collision_layer = 8
+collision_mask = 3
+priority = 1
+script = ExtResource("1_1co13")
+on_Sprite = ExtResource("2_i8rh6")
+off_Sprite = ExtResource("3_adj5i")
+
+[node name="switch_sprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("3_adj5i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5d4yp")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_iacvw")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
