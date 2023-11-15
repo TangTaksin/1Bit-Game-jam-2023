@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cp0oktbwtchc3"]
+
+[ext_resource type="Script" path="res://Scripts/Destructible.gd" id="1_nbo4b"]
+[ext_resource type="Texture2D" uid="uid://btfbbci5222ya" path="res://Sprites/breakable.png" id="2_bcix3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6u2i6"]
+size = Vector2(16, 16)
+
+[node name="Breakable" type="StaticBody2D"]
+script = ExtResource("1_nbo4b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_bcix3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6u2i6")

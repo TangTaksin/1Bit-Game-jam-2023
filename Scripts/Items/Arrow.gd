@@ -7,7 +7,6 @@ var direction : Vector2 = Vector2.RIGHT
 
 @onready var timer = $Timer
 
-
 func _init(dir : Vector2 = Vector2.DOWN) -> void:
 	direction = dir
 	rotation_degrees = rad_to_deg(direction.angle()) - 90
@@ -19,12 +18,12 @@ func _process(delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	queue_free()
-	pass # Replace with function body.
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print(body)
 	if body is Switch :
 		body.flipTheSwitch()
 		print("switch is flipped")
-		queue_free()
 	
+	if body.name != "Player" :
+		queue_free()
