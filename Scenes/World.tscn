@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dgyi8xfd56ild"]
+[gd_scene load_steps=19 format=3 uid="uid://dgyi8xfd56ild"]
 
 [ext_resource type="Texture2D" uid="uid://cags46glknww2" path="res://Asset Pack 1-bit/Tilesets/1Bit_Tilesets.png" id="1_mibp8"]
 [ext_resource type="PackedScene" uid="uid://c8jiqst6edjxb" path="res://Scenes/player.tscn" id="2_13is8"]
@@ -6,10 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://be46finlr4h25" path="res://Scenes/Interface.tscn" id="4_h6fn3"]
 [ext_resource type="PackedScene" uid="uid://yppt2ey0tgqv" path="res://Scenes/Switch Related/Hit_Switch.tscn" id="5_t6ae4"]
 [ext_resource type="PackedScene" uid="uid://baktvg0711cqy" path="res://Scenes/Switch Related/SimpleGate.tscn" id="6_c6h03"]
-[ext_resource type="Texture2D" uid="uid://dkggru6du6ef4" path="res://Asset Pack 1-bit/Items/gate_off.tres" id="6_j6vww"]
 [ext_resource type="PackedScene" uid="uid://blaugecl075wf" path="res://Scenes/Switch Related/Floor_Switch.tscn" id="7_px14i"]
 [ext_resource type="AudioStream" uid="uid://jyoqcneqkdxm" path="res://Audio/Music/668630__beetlemuse__bachs-prelude-in-c-chiptune.wav" id="8_nv0fu"]
 [ext_resource type="PackedScene" uid="uid://dh6o3r4l85phj" path="res://Scenes/Breakable.tscn" id="10_6prf6"]
+[ext_resource type="PackedScene" uid="uid://bagk5c1wyonxx" path="res://Scenes/Magic_Floor.tscn" id="12_ps8ws"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o7tla"]
 texture = ExtResource("1_mibp8")
@@ -873,6 +873,10 @@ size = Vector2(20, 382)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uhwvv"]
 size = Vector2(20, 624)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_xyn24"]
+atlas = ExtResource("1_mibp8")
+region = Rect2(16, 64, 16, 16)
+
 [node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_13is8")]
@@ -957,56 +961,56 @@ position = Vector2(448, 203)
 [node name="GateGroups" type="Node" parent="."]
 
 [node name="SimpleGate" parent="GateGroups" node_paths=PackedStringArray("connected_Switch") instance=ExtResource("6_c6h03")]
-position = Vector2(200, 156)
-on_Sprite = ExtResource("6_j6vww")
+position = Vector2(200, 157)
+off_Sprite = SubResource("AtlasTexture_xyn24")
 connected_Switch = NodePath("../../SwitchGroups/Hit_Switch3")
 
 [node name="SimpleGate10" parent="GateGroups" node_paths=PackedStringArray("connected_Switch") instance=ExtResource("6_c6h03")]
 position = Vector2(216, 107)
-on_Sprite = ExtResource("6_j6vww")
+off_Sprite = SubResource("AtlasTexture_xyn24")
 connected_Switch = NodePath("../../SwitchGroups/Hit_Switch")
 
 [node name="SimpleGate2" parent="GateGroups" node_paths=PackedStringArray("connected_Switch") instance=ExtResource("6_c6h03")]
 position = Vector2(328, 124)
-on_Sprite = ExtResource("6_j6vww")
+off_Sprite = SubResource("AtlasTexture_xyn24")
 connected_Switch = NodePath("../../ButtonGroups/button")
 
 [node name="SimpleGate3" parent="GateGroups" node_paths=PackedStringArray("connected_Switch") instance=ExtResource("6_c6h03")]
 position = Vector2(344, 124)
-on_Sprite = ExtResource("6_j6vww")
+off_Sprite = SubResource("AtlasTexture_xyn24")
 connected_Switch = NodePath("../../ButtonGroups/button")
 
 [node name="SimpleGate4" parent="GateGroups" node_paths=PackedStringArray("connected_Switch") instance=ExtResource("6_c6h03")]
 position = Vector2(360, 220)
-on_Sprite = ExtResource("6_j6vww")
+off_Sprite = SubResource("AtlasTexture_xyn24")
 connected_Switch = NodePath("../../SwitchGroups/Hit_Switch")
 isActivated = false
 
 [node name="SimpleGate5" parent="GateGroups" node_paths=PackedStringArray("connected_Switch") instance=ExtResource("6_c6h03")]
 position = Vector2(376, 220)
-on_Sprite = ExtResource("6_j6vww")
+off_Sprite = SubResource("AtlasTexture_xyn24")
 connected_Switch = NodePath("../../SwitchGroups/Hit_Switch")
 isActivated = false
 
 [node name="SimpleGate6" parent="GateGroups" node_paths=PackedStringArray("connected_Switch") instance=ExtResource("6_c6h03")]
 position = Vector2(536, 121)
-on_Sprite = ExtResource("6_j6vww")
+off_Sprite = SubResource("AtlasTexture_xyn24")
 connected_Switch = NodePath("../../ButtonGroups/button2")
 
 [node name="SimpleGate7" parent="GateGroups" node_paths=PackedStringArray("connected_Switch") instance=ExtResource("6_c6h03")]
 position = Vector2(536, 155)
-on_Sprite = ExtResource("6_j6vww")
+off_Sprite = SubResource("AtlasTexture_xyn24")
 connected_Switch = NodePath("../../SwitchGroups/Hit_Switch2")
 isActivated = false
 
 [node name="SimpleGate8" parent="GateGroups" node_paths=PackedStringArray("connected_Switch") instance=ExtResource("6_c6h03")]
 position = Vector2(552, 284)
-on_Sprite = ExtResource("6_j6vww")
+off_Sprite = SubResource("AtlasTexture_xyn24")
 connected_Switch = NodePath("../../SwitchGroups/Hit_Switch")
 
 [node name="SimpleGate9" parent="GateGroups" node_paths=PackedStringArray("connected_Switch") instance=ExtResource("6_c6h03")]
 position = Vector2(568, 284)
-on_Sprite = ExtResource("6_j6vww")
+off_Sprite = SubResource("AtlasTexture_xyn24")
 connected_Switch = NodePath("../../SwitchGroups/Hit_Switch")
 
 [node name="interectableGroups" type="Node" parent="."]
@@ -1043,6 +1047,9 @@ position = Vector2(543, 253)
 [node name="Breakable" parent="BreakableGroups" instance=ExtResource("10_6prf6")]
 position = Vector2(356, 301)
 
+[node name="Breakable7" parent="BreakableGroups" instance=ExtResource("10_6prf6")]
+position = Vector2(153, 305)
+
 [node name="Breakable2" parent="BreakableGroups" instance=ExtResource("10_6prf6")]
 position = Vector2(381, 28)
 
@@ -1062,3 +1069,17 @@ position = Vector2(563, 256)
 stream = ExtResource("8_nv0fu")
 volume_db = -20.0
 bus = &"Music"
+
+[node name="waterGroups" type="Node" parent="."]
+
+[node name="Magic_Floor" parent="waterGroups" instance=ExtResource("12_ps8ws")]
+position = Vector2(24, 156)
+
+[node name="Magic_Floor2" parent="waterGroups" instance=ExtResource("12_ps8ws")]
+position = Vector2(40, 156)
+
+[node name="Magic_Floor3" parent="waterGroups" instance=ExtResource("12_ps8ws")]
+position = Vector2(24, 172)
+
+[node name="Magic_Floor4" parent="waterGroups" instance=ExtResource("12_ps8ws")]
+position = Vector2(40, 172)

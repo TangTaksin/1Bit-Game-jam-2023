@@ -1,18 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://djxq27hclbhda"]
+[gd_scene load_steps=5 format=3 uid="uid://bagk5c1wyonxx"]
 
 [ext_resource type="Script" path="res://Scripts/Magic_Floor.gd" id="1_npmh4"]
-[ext_resource type="Texture2D" uid="uid://dapa0iuqwnvd6" path="res://Sprites/gate_temp.png" id="2_yrwf2"]
+[ext_resource type="Texture2D" uid="uid://dv1fawghgtf6c" path="res://Asset Pack 1-bit/Floor_magic_can_walk.tres" id="2_718ie"]
+[ext_resource type="Texture2D" uid="uid://c8r6d5dak7rg4" path="res://Asset Pack 1-bit/Floor_magic.tres" id="3_dneqt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yeoav"]
 size = Vector2(16, 16)
 
 [node name="Magic_Floor" type="StaticBody2D"]
+collision_layer = 32
 script = ExtResource("1_npmh4")
-on_Sprite = ExtResource("2_yrwf2")
+on_Sprite = ExtResource("2_718ie")
+off_Sprite = ExtResource("3_dneqt")
 
 [node name="Floor_Sprite" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("2_yrwf2")
+texture = ExtResource("2_718ie")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_yeoav")

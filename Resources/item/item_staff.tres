@@ -1,9 +1,9 @@
 [gd_resource type="Resource" load_steps=3 format=3 uid="uid://bwkut3y6n2isp"]
 
 [ext_resource type="Script" path="res://Scripts/Items/Item_Stave.gd" id="1_27k8k"]
-[ext_resource type="Texture2D" uid="uid://croqi8o3d32jm" path="res://Sprites/staff_temp.png" id="1_wepwp"]
+[ext_resource type="Texture2D" uid="uid://bcnqo1kk33yxb" path="res://Asset Pack 1-bit/Items/staff.tres" id="1_i77w5"]
 
 [resource]
 script = ExtResource("1_27k8k")
 itemname = "Stave"
-image = ExtResource("1_wepwp")
+image = ExtResource("1_i77w5")

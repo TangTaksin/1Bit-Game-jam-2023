@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dhlvkhya1cleh"]
+[gd_scene load_steps=4 format=3 uid="uid://f103g6o4oh6u"]
 
 [ext_resource type="Texture2D" uid="uid://ipaqvvbmjvab" path="res://Sprites/stave_spell.png" id="1_0xneg"]
 [ext_resource type="Script" path="res://Scripts/Items/Stave_Shot.gd" id="2_21dpa"]
@@ -12,6 +12,8 @@ texture = ExtResource("1_0xneg")
 script = ExtResource("2_21dpa")
 
 [node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 38
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_6x1pd")

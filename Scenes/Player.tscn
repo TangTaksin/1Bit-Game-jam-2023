@@ -166,7 +166,7 @@ packet_sequence = SubResource("OggPacketSequence_val00")
 [node name="Player" type="CharacterBody2D"]
 z_index = 2
 y_sort_enabled = true
-collision_mask = 22
+collision_mask = 54
 collision_priority = 2.0
 script = ExtResource("1_4cn0g")
 speed = 100.0

@@ -40,6 +40,7 @@ func _input(event: InputEvent) -> void:
 	var y = Input.get_axis("move_up", "move_down")
 	direction = Vector2(x, y).normalized()
 	
+	
 	if event.is_action_pressed("move_up"):
 		playerFacing = Vector2.UP
 	if event.is_action_pressed("move_down"):
