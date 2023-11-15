@@ -26,3 +26,7 @@ func flipTheSwitch() :
 		switchSprite.texture = off_Sprite
 	
 	switchToggle.emit()
+
+func set_switch_state(state : bool) : 
+	switchIsOn = state
+	switchToggle.emit()

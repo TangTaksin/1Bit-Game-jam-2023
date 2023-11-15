@@ -1,7 +1,9 @@
 extends Item
 
-func _init() -> void:
-	set_local_to_scene(true)
+var hammer = preload("res://Scenes/Item/hammer.tscn")
 
 func use(dir):
-	pass
+	var h = hammer.instantiate() as Hammer
+	h._init(dir)
+	
+	return h

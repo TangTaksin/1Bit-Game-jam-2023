@@ -24,14 +24,15 @@ func _input(event: InputEvent) -> void:
 	var y = Input.get_axis("ui_up", "ui_down")
 	direction = Vector2(x, y).normalized()
 	
-	if event.is_action_pressed("ui_up") :
-		playerFacing = Vector2.UP
-	if event.is_action_pressed("ui_down") :
-		playerFacing = Vector2.DOWN
-	if event.is_action_pressed("ui_left") :
-		playerFacing = Vector2.LEFT
-	if event.is_action_pressed("ui_right") :
-		playerFacing = Vector2.RIGHT
+	if !inventory.invIsUp and CanAct :
+		if event.is_action_pressed("ui_up") :
+			playerFacing = Vector2.UP
+		if event.is_action_pressed("ui_down") :
+			playerFacing = Vector2.DOWN
+		if event.is_action_pressed("ui_left") :
+			playerFacing = Vector2.LEFT
+		if event.is_action_pressed("ui_right") :
+			playerFacing = Vector2.RIGHT
 
 func UseItem(dir :Vector2):
 	var prefab = inventory.itemList[inventory.currentItemIndex].use(dir)
