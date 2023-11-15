@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://yppt2ey0tgqv"]
+[gd_scene load_steps=8 format=3 uid="uid://yppt2ey0tgqv"]
 
 [ext_resource type="Script" path="res://Scripts/Switch Related/Switch.gd" id="1_nrijn"]
 [ext_resource type="Texture2D" uid="uid://dq6fd023ytngj" path="res://Asset Pack 1-bit/Items/switch_on.tres" id="2_xn2br"]
@@ -15,12 +15,19 @@ sampling_rate = 44100.0
 [sub_resource type="AudioStreamOggVorbis" id="AudioStreamOggVorbis_hx1oy"]
 packet_sequence = SubResource("OggPacketSequence_a2q2t")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nimf4"]
+
 [node name="Hit_Switch" type="StaticBody2D"]
+z_index = 1
+collision_layer = 4
+collision_mask = 11
+collision_priority = 2.0
 script = ExtResource("1_nrijn")
 on_Sprite = ExtResource("2_xn2br")
 off_Sprite = ExtResource("3_26jh5")
 
 [node name="switch_sprite" type="Sprite2D" parent="."]
+z_index = 2
 texture_filter = 1
 texture = ExtResource("3_26jh5")
 
@@ -30,3 +37,9 @@ shape = SubResource("RectangleShape2D_bgy2w")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamOggVorbis_hx1oy")
 bus = &"SFX"
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+collision_priority = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_nimf4")

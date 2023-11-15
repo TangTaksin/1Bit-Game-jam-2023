@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b6y7a6riome4g"]
+[gd_scene load_steps=7 format=3 uid="uid://bbler6g1e43yu"]
 
 [ext_resource type="Script" path="res://Scripts/Items/Hammer.gd" id="1_a6y7m"]
 [ext_resource type="Texture2D" uid="uid://dssujdipf2b22" path="res://Sprites/hammer_up.png" id="2_jy18a"]
@@ -10,6 +10,8 @@
 size = Vector2(16, 16)
 
 [node name="Hammer" type="Area2D"]
+collision_layer = 0
+collision_mask = 6
 script = ExtResource("1_a6y7m")
 up_sprite = ExtResource("2_jy18a")
 down_sprite = ExtResource("3_fuocy")

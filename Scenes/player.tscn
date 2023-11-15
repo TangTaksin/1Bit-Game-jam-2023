@@ -163,16 +163,17 @@ sampling_rate = 44100.0
 [sub_resource type="AudioStreamOggVorbis" id="AudioStreamOggVorbis_yyp7w"]
 packet_sequence = SubResource("OggPacketSequence_val00")
 
-[node name="PlayerCharacter" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D"]
 z_index = 2
 y_sort_enabled = true
-collision_mask = 6
+collision_mask = 22
 collision_priority = 2.0
 script = ExtResource("1_4cn0g")
 speed = 100.0
 inventory = ExtResource("2_twces")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 3
 sprite_frames = SubResource("SpriteFrames_h7mh7")
 animation = &"idle_down"
 autoplay = "idle_down"

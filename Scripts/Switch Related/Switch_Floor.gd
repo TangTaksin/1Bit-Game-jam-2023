@@ -1,4 +1,5 @@
 extends Switch
+class_name Floor_Switch
 
 @export var isToggle : bool
 @onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer

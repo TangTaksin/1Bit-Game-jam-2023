@@ -78,6 +78,8 @@ Use_Item={
 2d_physics/layer_1="player"
 2d_physics/layer_2="interactables"
 2d_physics/layer_3="obstacles"
+2d_physics/layer_4="arrow"
+2d_physics/layer_5="spike"
 
 [rendering]
 

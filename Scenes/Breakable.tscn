@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cp0oktbwtchc3"]
+[gd_scene load_steps=4 format=3 uid="uid://dh6o3r4l85phj"]
 
 [ext_resource type="Script" path="res://Scripts/Destructible.gd" id="1_nbo4b"]
 [ext_resource type="Texture2D" uid="uid://btfbbci5222ya" path="res://Sprites/breakable.png" id="2_bcix3"]
@@ -7,6 +7,7 @@
 size = Vector2(16, 16)
 
 [node name="Breakable" type="StaticBody2D"]
+collision_layer = 4
 script = ExtResource("1_nbo4b")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
