@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://de1x1cttwbanb"]
+[gd_scene load_steps=8 format=3 uid="uid://de1x1cttwbanb"]
 
 [ext_resource type="PackedScene" uid="uid://btimk30n08fqj" path="res://Scenes/Player.tscn" id="1_1o02m"]
 [ext_resource type="PackedScene" uid="uid://be46finlr4h25" path="res://Scenes/Interface.tscn" id="2_amu40"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://blaugecl075wf" path="res://Scenes/Switch Related/Floor_Switch.tscn" id="4_jw2oq"]
 [ext_resource type="PackedScene" uid="uid://yppt2ey0tgqv" path="res://Scenes/Switch Related/Hit_Switch.tscn" id="5_oxil4"]
 [ext_resource type="PackedScene" uid="uid://cp0oktbwtchc3" path="res://Scenes/Breakable.tscn" id="6_7rhim"]
+[ext_resource type="PackedScene" uid="uid://djxq27hclbhda" path="res://Scenes/Magic_Floor.tscn" id="7_4f0t0"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -40,3 +41,6 @@ position = Vector2(-43, 1)
 
 [node name="Breakable2" parent="." instance=ExtResource("6_7rhim")]
 position = Vector2(-43, -15)
+
+[node name="Magic_Floor" parent="." instance=ExtResource("7_4f0t0")]
+position = Vector2(0, 38)
