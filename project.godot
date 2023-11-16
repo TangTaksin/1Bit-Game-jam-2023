@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="1BitGameJam2023"
-run/main_scene="res://Scenes/World.tscn"
+run/main_scene="res://Scenes/levels/World.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-AudioManager="*res://Scripts/AudioManager.gd"
+global="*res://Scripts/global.gd"
 
 [display]
 

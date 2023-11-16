@@ -15,7 +15,7 @@ const MAX_STAMINA = 100
 
 
 # Internal Variables
-var playerFacing: Vector2 = Vector2.DOWN
+var playerFacing: Vector2 = Vector2.UP
 var direction: Vector2
 
 var carried_item: Node2D = null
@@ -190,3 +190,4 @@ func use_item(dir: Vector2):
 func _on_active_cool_down_timeout() -> void:
 	CanAct = true
 	pass  # Replace with function body.
+
