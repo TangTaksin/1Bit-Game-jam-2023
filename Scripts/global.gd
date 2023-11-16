@@ -15,7 +15,7 @@ func  finish_changescene_world():
 	if transition_scene == true:
 		transition_scene = false
 		if  currrent_scene == "world":
-			currrent_scene = "level_1"
+			currrent_scene = "level1"
 		else :
 			currrent_scene == "world"
 			
@@ -23,8 +23,8 @@ func  finish_changescene_world():
 func finish_changescene_level_1():
 	if transition_scene == true:
 		transition_scene = false
-		if currrent_scene =="level_1":
-			currrent_scene = "level_2"
+		if currrent_scene =="level1":
+			currrent_scene = "level2"
 		else :
-			currrent_scene == "level_1"
+			currrent_scene == "level1"
 			

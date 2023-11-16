@@ -906,7 +906,7 @@ size = Vector2(14, 19)
 script = ExtResource("1_jxcht")
 
 [node name="Player" parent="." instance=ExtResource("2_7hwik")]
-position = Vector2(64, 344)
+position = Vector2(62, 342)
 speed = 80.0
 has_acceleration = true
 acceleration = 700

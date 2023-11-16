@@ -21,7 +21,7 @@ func _on_door_transition_body_exited(body: Node2D) -> void:
 	
 func change_scene():
 	if global.transition_scene == true:
-		if global.currrent_scene == "level_1":
+		if global.currrent_scene == "level1":
 			print("level1 to level2")
 			get_tree().change_scene_to_file("res://Scenes/levels/level_2.tscn")
 			global.finish_changescene_level_1()
