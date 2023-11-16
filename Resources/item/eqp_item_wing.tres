@@ -1,9 +1,9 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dncdpjj0khok4"]
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dncdpjj0khok4"]
 
 [ext_resource type="Texture2D" uid="uid://d2v1xejt8uumf" path="res://Asset Pack 1-bit/Items/wing.tres" id="1_0dx7i"]
-[ext_resource type="Script" path="res://Scripts/Items/Item.gd" id="2_ghuof"]
+[ext_resource type="Script" path="res://Scripts/Items/Item_Wing.gd" id="2_asrht"]
 
 [resource]
-script = ExtResource("2_ghuof")
-itemname = "Bow"
+script = ExtResource("2_asrht")
+itemname = "Wing"
 image = ExtResource("1_0dx7i")

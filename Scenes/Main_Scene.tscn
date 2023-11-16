@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://baktvg0711cqy" path="res://Scenes/Switch Related/SimpleGate.tscn" id="4_7q6ac"]
 [ext_resource type="PackedScene" uid="uid://blaugecl075wf" path="res://Scenes/Switch Related/Floor_Switch.tscn" id="4_jw2oq"]
 [ext_resource type="PackedScene" uid="uid://yppt2ey0tgqv" path="res://Scenes/Switch Related/Hit_Switch.tscn" id="5_oxil4"]
-[ext_resource type="PackedScene" uid="uid://cp0oktbwtchc3" path="res://Scenes/Breakable.tscn" id="6_7rhim"]
-[ext_resource type="PackedScene" uid="uid://djxq27hclbhda" path="res://Scenes/Magic_Floor.tscn" id="7_4f0t0"]
+[ext_resource type="PackedScene" uid="uid://dh6o3r4l85phj" path="res://Scenes/Breakable.tscn" id="6_7rhim"]
+[ext_resource type="PackedScene" uid="uid://bagk5c1wyonxx" path="res://Scenes/Magic_Floor.tscn" id="7_4f0t0"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -26,7 +26,6 @@ offset_bottom = 5.0
 [node name="VanishingGate" parent="." node_paths=PackedStringArray("connected_Switch") instance=ExtResource("4_7q6ac")]
 position = Vector2(37, -29)
 connected_Switch = NodePath("../Area2D")
-isActivated = true
 
 [node name="Area2D" parent="." instance=ExtResource("4_jw2oq")]
 position = Vector2(37, 0)

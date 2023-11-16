@@ -6,5 +6,5 @@ func use(dir):
 	var s = staff_shot.instantiate() as Stave_Shot
 	s._init(dir)
 	
-	return s
+	return [s, false]
 

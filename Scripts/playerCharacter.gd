@@ -29,10 +29,11 @@ var stamina: float = MAX_STAMINA
 @onready var interaction_area: Area2D = $InteractionArea
 @onready var audio_player = $AudioStreamPlayer
 
-
 func _physics_process(delta: float) -> void:
-	handle_movement(delta)
-	handle_animation()
+	if ! inventory.invIsUp and CanAct:
+		handle_movement(delta)
+		handle_animation()
+	
 	handle_interaction()
 	handle_inventory()
 	
@@ -53,16 +54,6 @@ func _input(event: InputEvent) -> void:
 	var x = Input.get_axis("move_left", "move_right");
 	var y = Input.get_axis("move_up", "move_down")
 	direction = Vector2(x, y).normalized()
-
-	if event.is_action_pressed("move_up"):
-		playerFacing = Vector2.UP
-	if event.is_action_pressed("move_down"):
-		playerFacing = Vector2.DOWN
-	if event.is_action_pressed("move_left"):
-		playerFacing = Vector2.LEFT
-	if event.is_action_pressed("move_right"):
-		playerFacing = Vector2.RIGHT
-	
 
 func handle_movement(delta):
 	var new_direction = direction.normalized()
@@ -181,10 +172,16 @@ func drop_item():
 		print("No item to drop")
 
 func use_item(dir: Vector2):
-	var prefab = inventory.itemList[inventory.currentItemIndex].use(dir)
-	if prefab != null:
-		prefab.position = global_position
-		get_parent().add_child(prefab)
+	var item = inventory.itemList[inventory.currentItemIndex].use(dir)
+	var prefab
+	
+	if item != null:
+		prefab = item[0]
+		if item[1] == false:
+			prefab.position = global_position
+			get_parent().add_child(prefab)
+		else :
+			add_child(prefab)
 	pass
 
 func _on_active_cool_down_timeout() -> void:

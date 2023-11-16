@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://djeyg3i8fm81b"]
+
+[ext_resource type="Texture2D" uid="uid://d2v1xejt8uumf" path="res://Asset Pack 1-bit/Items/wing.tres" id="1_hahff"]
+[ext_resource type="Script" path="res://Scripts/Items/Wing.gd" id="2_uvrju"]
+
+[node name="Wing" type="Sprite2D"]
+texture = ExtResource("1_hahff")
+script = ExtResource("2_uvrju")
+
+[connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]

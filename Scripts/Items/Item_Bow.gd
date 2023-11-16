@@ -6,5 +6,5 @@ func use(dir):
 	var a = arrow.instantiate() as Arrow
 	a._init(dir)
 	
-	return a
+	return [a, false]
 
