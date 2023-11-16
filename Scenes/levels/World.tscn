@@ -906,7 +906,7 @@ size = Vector2(14, 19)
 script = ExtResource("1_jxcht")
 
 [node name="Player" parent="." instance=ExtResource("2_7hwik")]
-position = Vector2(70, 326)
+position = Vector2(64, 344)
 speed = 80.0
 has_acceleration = true
 acceleration = 700
@@ -953,7 +953,7 @@ position = Vector2(232, 204)
 collision_layer = 6
 
 [node name="Hit_Switch2" parent="SwitchGroups" instance=ExtResource("5_ackek")]
-position = Vector2(444, 293)
+position = Vector2(447, 294)
 collision_layer = 6
 switchIsOn = true
 
@@ -982,13 +982,17 @@ off_Sprite = SubResource("AtlasTexture_xyn24")
 connected_Switch = [NodePath("../../SwitchGroups/Hit_Switch")]
 default_state = true
 
-[node name="SimpleGate2" parent="GateGroups" instance=ExtResource("7_20no8")]
+[node name="SimpleGate2" parent="GateGroups" node_paths=PackedStringArray("connected_Switch") instance=ExtResource("7_20no8")]
 position = Vector2(328, 124)
 off_Sprite = SubResource("AtlasTexture_xyn24")
+connected_Switch = [NodePath("../../ButtonGroups/button")]
+default_state = true
 
-[node name="SimpleGate3" parent="GateGroups" instance=ExtResource("7_20no8")]
+[node name="SimpleGate3" parent="GateGroups" node_paths=PackedStringArray("connected_Switch") instance=ExtResource("7_20no8")]
 position = Vector2(344, 124)
 off_Sprite = SubResource("AtlasTexture_xyn24")
+connected_Switch = [NodePath("../../ButtonGroups/button")]
+default_state = true
 
 [node name="SimpleGate4" parent="GateGroups" node_paths=PackedStringArray("connected_Switch") instance=ExtResource("7_20no8")]
 position = Vector2(360, 220)
@@ -1002,21 +1006,26 @@ off_Sprite = SubResource("AtlasTexture_xyn24")
 connected_Switch = [NodePath("../../SwitchGroups/Hit_Switch")]
 default_state = true
 
-[node name="SimpleGate6" parent="GateGroups" instance=ExtResource("7_20no8")]
+[node name="SimpleGate6" parent="GateGroups" node_paths=PackedStringArray("connected_Switch") instance=ExtResource("7_20no8")]
 position = Vector2(536, 121)
 off_Sprite = SubResource("AtlasTexture_xyn24")
+connected_Switch = [NodePath("../../ButtonGroups/button2")]
+default_state = true
 
-[node name="SimpleGate7" parent="GateGroups" instance=ExtResource("7_20no8")]
+[node name="SimpleGate7" parent="GateGroups" node_paths=PackedStringArray("connected_Switch") instance=ExtResource("7_20no8")]
 position = Vector2(536, 155)
 off_Sprite = SubResource("AtlasTexture_xyn24")
+connected_Switch = [NodePath("../../SwitchGroups/Hit_Switch2")]
 
-[node name="SimpleGate8" parent="GateGroups" instance=ExtResource("7_20no8")]
+[node name="SimpleGate8" parent="GateGroups" node_paths=PackedStringArray("connected_Switch") instance=ExtResource("7_20no8")]
 position = Vector2(552, 284)
 off_Sprite = SubResource("AtlasTexture_xyn24")
+connected_Switch = [NodePath("../../SwitchGroups/Hit_Switch")]
 
-[node name="SimpleGate9" parent="GateGroups" instance=ExtResource("7_20no8")]
+[node name="SimpleGate9" parent="GateGroups" node_paths=PackedStringArray("connected_Switch") instance=ExtResource("7_20no8")]
 position = Vector2(568, 284)
 off_Sprite = SubResource("AtlasTexture_xyn24")
+connected_Switch = [NodePath("../../SwitchGroups/Hit_Switch")]
 
 [node name="interectableGroups" type="Node" parent="."]
 

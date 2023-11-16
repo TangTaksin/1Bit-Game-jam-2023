@@ -1,4 +1,5 @@
 extends Item
+class_name Item_wing
 #return {"x":x, "y":y}
 var wing = preload("res://Scenes/Item/Wing.tscn")
 var active : bool = false

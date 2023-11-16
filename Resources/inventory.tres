@@ -1,9 +1,8 @@
-[gd_resource type="Resource" script_class="Inventory" load_steps=10 format=3 uid="uid://5vythd7dhowv"]
+[gd_resource type="Resource" script_class="Inventory" load_steps=9 format=3 uid="uid://5vythd7dhowv"]
 
 [ext_resource type="Resource" uid="uid://cwab2mvven5qy" path="res://Resources/item/item_bow.tres" id="1_osssb"]
 [ext_resource type="Script" path="res://Scripts/inventory.gd" id="2_2ilje"]
 [ext_resource type="Resource" uid="uid://6pexfa3lsr2u" path="res://Resources/item/item_hammer.tres" id="2_utky2"]
-[ext_resource type="Resource" uid="uid://clusdf8vhjjdb" path="res://Resources/item/item_ocarina.tres" id="3_671uf"]
 [ext_resource type="Resource" uid="uid://bwkut3y6n2isp" path="res://Resources/item/item_staff.tres" id="4_vvnis"]
 [ext_resource type="Resource" uid="uid://bk7pjefu2apm3" path="res://Resources/item/eqp_item_glove.tres" id="5_rekhw"]
 [ext_resource type="Resource" uid="uid://cekjtwolgehp4" path="res://Resources/item/eqp_item_shoe.tres" id="6_wrm8m"]
@@ -12,4 +11,4 @@
 
 [resource]
 script = ExtResource("2_2ilje")
-itemList = Array[Resource("res://Scripts/Items/Item.gd")]([ExtResource("1_osssb"), ExtResource("2_utky2"), ExtResource("3_671uf"), ExtResource("4_vvnis"), ExtResource("5_rekhw"), ExtResource("6_wrm8m"), ExtResource("7_i3ow4"), ExtResource("8_py8on")])
+itemList = Array[Resource("res://Scripts/Items/Item.gd")]([ExtResource("1_osssb"), ExtResource("2_utky2"), ExtResource("4_vvnis"), ExtResource("8_py8on"), ExtResource("5_rekhw"), ExtResource("6_wrm8m"), ExtResource("7_i3ow4")])
