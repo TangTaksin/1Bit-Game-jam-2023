@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://djeyg3i8fm81b"]
+[gd_scene load_steps=3 format=3 uid="uid://bam15r416g7by"]
 
 [ext_resource type="Texture2D" uid="uid://k58w6se0icn3" path="res://Sprites/wing.png" id="1_ku8eg"]
 [ext_resource type="Script" path="res://Scripts/Items/Wing.gd" id="2_uvrju"]

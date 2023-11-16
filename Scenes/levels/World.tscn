@@ -939,6 +939,7 @@ collision_mask = 0
 polygon = PackedVector2Array(6, -4, 519, 2, 522, 48, 527, 48, 527, 26, 546, 26, 545, 48, 548, 48, 548, 1, 634, 2, 631, 367, 82, 364, 82, 393, 44, 393, 46, 363, 7, 363, 9, -3, -18, 395, 486, 405, 667, 394, 658, -18, 230, -20, 6, -13)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Interface" parent="CanvasLayer" instance=ExtResource("4_upevr")]
 offset_left = -1.0
@@ -955,7 +956,6 @@ collision_layer = 6
 [node name="Hit_Switch2" parent="SwitchGroups" instance=ExtResource("5_ackek")]
 position = Vector2(447, 294)
 collision_layer = 6
-switchIsOn = true
 
 [node name="Hit_Switch3" parent="SwitchGroups" instance=ExtResource("5_ackek")]
 position = Vector2(306, 240)
@@ -980,37 +980,31 @@ connected_Switch = [NodePath("../../SwitchGroups/Hit_Switch3")]
 position = Vector2(216, 107)
 off_Sprite = SubResource("AtlasTexture_xyn24")
 connected_Switch = [NodePath("../../SwitchGroups/Hit_Switch")]
-default_state = true
 
 [node name="SimpleGate2" parent="GateGroups" node_paths=PackedStringArray("connected_Switch") instance=ExtResource("7_20no8")]
 position = Vector2(328, 124)
 off_Sprite = SubResource("AtlasTexture_xyn24")
 connected_Switch = [NodePath("../../ButtonGroups/button")]
-default_state = true
 
 [node name="SimpleGate3" parent="GateGroups" node_paths=PackedStringArray("connected_Switch") instance=ExtResource("7_20no8")]
 position = Vector2(344, 124)
 off_Sprite = SubResource("AtlasTexture_xyn24")
 connected_Switch = [NodePath("../../ButtonGroups/button")]
-default_state = true
 
 [node name="SimpleGate4" parent="GateGroups" node_paths=PackedStringArray("connected_Switch") instance=ExtResource("7_20no8")]
 position = Vector2(360, 220)
 off_Sprite = SubResource("AtlasTexture_xyn24")
 connected_Switch = [NodePath("../../SwitchGroups/Hit_Switch")]
-default_state = true
 
 [node name="SimpleGate5" parent="GateGroups" node_paths=PackedStringArray("connected_Switch") instance=ExtResource("7_20no8")]
 position = Vector2(376, 220)
 off_Sprite = SubResource("AtlasTexture_xyn24")
 connected_Switch = [NodePath("../../SwitchGroups/Hit_Switch")]
-default_state = true
 
 [node name="SimpleGate6" parent="GateGroups" node_paths=PackedStringArray("connected_Switch") instance=ExtResource("7_20no8")]
 position = Vector2(536, 121)
 off_Sprite = SubResource("AtlasTexture_xyn24")
 connected_Switch = [NodePath("../../ButtonGroups/button2")]
-default_state = true
 
 [node name="SimpleGate7" parent="GateGroups" node_paths=PackedStringArray("connected_Switch") instance=ExtResource("7_20no8")]
 position = Vector2(536, 155)

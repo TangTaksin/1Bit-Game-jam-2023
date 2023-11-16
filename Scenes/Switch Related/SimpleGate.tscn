@@ -11,7 +11,7 @@ size = Vector2(16, 16)
 script = ExtResource("1_lh7hv")
 on_Sprite = ExtResource("2_jkxa4")
 off_Sprite = ExtResource("2_73634")
-isActivated = true
+default_state = true
 
 [node name="GateSprite" type="Sprite2D" parent="."]
 texture_filter = 1
