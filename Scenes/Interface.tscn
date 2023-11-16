@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://be46finlr4h25"]
+[gd_scene load_steps=16 format=3 uid="uid://be46finlr4h25"]
 
 [ext_resource type="Script" path="res://Scripts/Interface.gd" id="1_vf4us"]
 [ext_resource type="Texture2D" uid="uid://dtkb027gusf5e" path="res://Asset Pack 1-bit/Items/bow.tres" id="4_c35yu"]
@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://bmijqkocp4w4e" path="res://Asset Pack 1-bit/Items/shoe.tres" id="9_qsjfa"]
 [ext_resource type="Texture2D" uid="uid://tow8fgmtka1m" path="res://Asset Pack 1-bit/Items/lamp.tres" id="10_52frp"]
 [ext_resource type="Texture2D" uid="uid://di0bu6lsfbweh" path="res://Sprites/1bit 16px patterns and tiles.png" id="11_5pqxn"]
-[ext_resource type="Texture2D" uid="uid://7i8an15v0f81" path="res://Asset Pack 1-bit/XC1_tension_icon_Shulk_high.png" id="11_fwmk5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_qdxi2"]
 font = ExtResource("5_cusbm")
@@ -288,10 +287,6 @@ offset_right = 254.5
 offset_bottom = 171.648
 pivot_offset = Vector2(24, 24)
 texture = ExtResource("6_lq43s")
-
-[node name="Xc1TensionIconShulkHigh" type="Sprite2D" parent="Panel"]
-position = Vector2(312, 166)
-texture = ExtResource("11_fwmk5")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = SubResource("AudioStreamOggVorbis_xwlnx")

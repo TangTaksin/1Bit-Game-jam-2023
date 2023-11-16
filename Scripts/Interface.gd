@@ -58,3 +58,4 @@ func UpdateInterface() :
 	select.set_global_position(itemIcons[inventory.currentItemIndex].get_global_position() - (Vector2.ONE * 3))
 	
 	pass
+

@@ -938,7 +938,7 @@ offset_bottom = 8.0
 [node name="SwitchGroups" type="Node" parent="."]
 
 [node name="Hit_Switch" parent="SwitchGroups" instance=ExtResource("5_t6ae4")]
-position = Vector2(231, 204)
+position = Vector2(232, 204)
 collision_layer = 6
 
 [node name="Hit_Switch2" parent="SwitchGroups" instance=ExtResource("5_t6ae4")]
@@ -956,7 +956,7 @@ collision_layer = 6
 position = Vector2(296, 29)
 
 [node name="button2" parent="ButtonGroups" instance=ExtResource("7_px14i")]
-position = Vector2(448, 203)
+position = Vector2(447, 185)
 
 [node name="GateGroups" type="Node" parent="."]
 
@@ -1048,7 +1048,13 @@ position = Vector2(543, 253)
 position = Vector2(356, 301)
 
 [node name="Breakable7" parent="BreakableGroups" instance=ExtResource("10_6prf6")]
-position = Vector2(153, 305)
+position = Vector2(262, 253)
+
+[node name="Breakable8" parent="BreakableGroups" instance=ExtResource("10_6prf6")]
+position = Vector2(249, 256)
+
+[node name="Breakable9" parent="BreakableGroups" instance=ExtResource("10_6prf6")]
+position = Vector2(260, 267)
 
 [node name="Breakable2" parent="BreakableGroups" instance=ExtResource("10_6prf6")]
 position = Vector2(381, 28)

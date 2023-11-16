@@ -3,9 +3,11 @@ class_name Player
 
 const CARRIED_ITEM_OFFSET = Vector2(0, -19)
 const DROP_ITEM_DISTANCE = 16
+const MAX_STAMINA = 100
 
 # Exported Variables
-@export var speed: float = 300
+@export var speed: float = 80
+@export var run_speed: float = 120
 @export var has_acceleration = false
 @export var acceleration = 1000
 @export var deacceleration = 1000
@@ -19,6 +21,7 @@ var direction: Vector2
 var carried_item: Node2D = null
 
 var CanAct: bool = true
+var stamina: float = MAX_STAMINA
 
 # OnReady Variables
 @onready var actionCD: Timer = $ActionCoolDown
@@ -32,6 +35,17 @@ func _physics_process(delta: float) -> void:
 	handle_animation()
 	handle_interaction()
 	handle_inventory()
+	
+	if  Input.is_action_pressed("run") and stamina > 0:
+		speed = run_speed
+		stamina -= delta * 20
+		if stamina < 0:
+			stamina = 0
+		print(stamina)
+	else :
+		speed = 80
+		stamina = min(stamina + delta * 5, MAX_STAMINA)
+		print(stamina)
 
 
 
@@ -39,8 +53,7 @@ func _input(event: InputEvent) -> void:
 	var x = Input.get_axis("move_left", "move_right");
 	var y = Input.get_axis("move_up", "move_down")
 	direction = Vector2(x, y).normalized()
-	
-	
+
 	if event.is_action_pressed("move_up"):
 		playerFacing = Vector2.UP
 	if event.is_action_pressed("move_down"):
@@ -49,7 +62,6 @@ func _input(event: InputEvent) -> void:
 		playerFacing = Vector2.LEFT
 	if event.is_action_pressed("move_right"):
 		playerFacing = Vector2.RIGHT
-	
 	
 
 func handle_movement(delta):
