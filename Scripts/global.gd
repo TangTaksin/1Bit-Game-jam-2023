@@ -24,7 +24,15 @@ func finish_changescene_level_1():
 	if transition_scene == true:
 		transition_scene = false
 		if currrent_scene =="level1":
-			currrent_scene = "level2"
+			currrent_scene = "level3"
 		else :
 			currrent_scene == "level1"
+
+func finish_changescene_end():
+	if transition_scene == true:
+		transition_scene = false
+		if currrent_scene =="leve3":
+			currrent_scene = "level2"
+	else :
+		currrent_scene == "level3"
 			
