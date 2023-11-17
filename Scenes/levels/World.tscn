@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dgyi8xfd56ild"]
+[gd_scene load_steps=17 format=3 uid="uid://dgyi8xfd56ild"]
 
 [ext_resource type="Script" path="res://Scripts/World.gd" id="1_jxcht"]
 [ext_resource type="PackedScene" uid="uid://c8jiqst6edjxb" path="res://Scenes/player.tscn" id="2_7hwik"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dh6o3r4l85phj" path="res://Scenes/Breakable.tscn" id="9_psjki"]
 [ext_resource type="PackedScene" uid="uid://bagk5c1wyonxx" path="res://Scenes/Magic_Floor.tscn" id="11_0flly"]
 [ext_resource type="AudioStream" uid="uid://kj8eidxjma7q" path="res://Audio/Music/Music.wav" id="11_42vdb"]
+[ext_resource type="PackedScene" uid="uid://dyjgl7iy6ahja" path="res://Scenes/Chest.tscn" id="13_offbt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3grh8"]
 texture = ExtResource("3_7rh4o")
@@ -457,7 +458,7 @@ size = Vector2(14, 19)
 script = ExtResource("1_jxcht")
 
 [node name="Player" parent="." instance=ExtResource("2_7hwik")]
-position = Vector2(62, 342)
+position = Vector2(590, 98)
 speed = 80.0
 has_acceleration = true
 acceleration = 700
@@ -676,6 +677,9 @@ position = Vector2(64, 365)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door_transition"]
 position = Vector2(472, -326)
 shape = SubResource("RectangleShape2D_yv5s7")
+
+[node name="Chest" parent="." instance=ExtResource("13_offbt")]
+position = Vector2(536, 56)
 
 [connection signal="body_entered" from="Door_transition" to="." method="_on_door_transition_body_entered"]
 [connection signal="body_exited" from="Door_transition" to="." method="_on_door_transition_body_exited"]

@@ -31,14 +31,13 @@ var stamina: float = MAX_STAMINA
 @onready var audio_walkSFX = $walkSFX
 
 func _physics_process(delta: float) -> void:
-	if ! inventory.invIsUp and CanAct:
-		handle_movement(delta)
-		handle_animation()
-
+	handle_movement(delta)
+	handle_animation()
+	
 	handle_interaction()
 	handle_inventory()
-
-	if Input.is_action_pressed("run") and stamina > 0:
+	
+	if  Input.is_action_pressed("run") and stamina > 0 and !inventory.itemList[5].item_disabled:
 		speed = run_speed
 		stamina -= delta * 20
 		if stamina < 0:
@@ -49,14 +48,12 @@ func _physics_process(delta: float) -> void:
 		stamina = min(stamina + delta * 5, MAX_STAMINA)
 		print(stamina)
 
-
-
-func _input(event: InputEvent) -> void:
+func handle_movement(delta):
+	
 	var x = Input.get_axis("move_left", "move_right");
 	var y = Input.get_axis("move_up", "move_down")
 	direction = Vector2(x, y).normalized()
-
-func handle_movement(delta):
+	
 	var new_direction = direction.normalized()
 	if has_acceleration:
 		if new_direction.length() == 0.0:
@@ -68,7 +65,9 @@ func handle_movement(delta):
 		velocity = new_direction * speed
 
 	if new_direction.length() > 0.0:
-		playerFacing = new_direction
+		if ! inventory.invIsUp and CanAct:
+			playerFacing = new_direction
+	
 
 func handle_animation():
 	if playerFacing == Vector2.LEFT:
@@ -113,7 +112,10 @@ func handle_interaction():
 			# Player is not carrying an item, try to pick up one
 			var overlapping_items = interaction_area.get_overlapping_bodies()
 			for item in overlapping_items:
-				if item is StaticBody2D:
+				if item is Chest :
+					item.return_item()
+					break
+				if item is StaticBody2D and !inventory.itemList[4].item_disabled:
 					print("Picking up item:", item)
 					pick_up_item(item)
 					break

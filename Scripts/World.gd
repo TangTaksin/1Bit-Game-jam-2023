@@ -1,10 +1,13 @@
 extends Node2D
 
+@onready var invRes : Inventory = preload("res://Resources/inventory.tres")
 
-# Called when the node enters the scene tree for the first time.
+@export var disableGlove : bool
+@export var disableBoot : bool
+
 func _ready() -> void:
-	pass # Replace with function body.
-
+	invRes.set_item_disable(4, disableGlove)
+	invRes.set_item_disable(5, disableBoot)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

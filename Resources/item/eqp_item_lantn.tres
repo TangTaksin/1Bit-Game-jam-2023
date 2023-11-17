@@ -5,5 +5,9 @@
 
 [resource]
 script = ExtResource("2_14ne6")
-itemname = "Bow"
+itemname = "Lantern"
+itemname_disable = ""
 image = ExtResource("1_e6ikd")
+description = "an old lanturn still work as well"
+description_disable = ""
+disabled = true

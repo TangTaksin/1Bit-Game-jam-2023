@@ -966,6 +966,7 @@ region = Rect2(16, 64, 16, 16)
 size = Vector2(16, 17.5)
 
 [node name="level1" type="Node2D"]
+position = Vector2(-1, 12)
 script = ExtResource("1_5u4vg")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -1042,16 +1043,14 @@ position = Vector2(124, 91)
 
 [node name="GateGroups" type="Node" parent="."]
 
-[node name="SimpleGate2" parent="GateGroups" node_paths=PackedStringArray("connected_Switch") instance=ExtResource("7_t74u0")]
+[node name="SimpleGate2" parent="GateGroups" instance=ExtResource("7_t74u0")]
 position = Vector2(93, 250)
 off_Sprite = SubResource("AtlasTexture_5dlud")
-connected_Switch = [NodePath("../../SwitchGroups/Hit_Switch"), NodePath("../../ButtonGroups/button5")]
 default_state = true
 
-[node name="SimpleGate3" parent="GateGroups" node_paths=PackedStringArray("connected_Switch") instance=ExtResource("7_t74u0")]
+[node name="SimpleGate3" parent="GateGroups" instance=ExtResource("7_t74u0")]
 position = Vector2(45, 59)
 off_Sprite = SubResource("AtlasTexture_5dlud")
-connected_Switch = [NodePath("../../ButtonGroups/button4")]
 default_state = true
 
 [node name="SimpleGate6" parent="GateGroups" node_paths=PackedStringArray("connected_Switch") instance=ExtResource("7_t74u0")]
@@ -1061,10 +1060,9 @@ off_Sprite = SubResource("AtlasTexture_5dlud")
 connected_Switch = [NodePath("../../SwitchGroups/Hit_Switch2"), NodePath("../../ButtonGroups/button6"), NodePath("../../ButtonGroups/button7")]
 default_state = true
 
-[node name="SimpleGate4" parent="GateGroups" node_paths=PackedStringArray("connected_Switch") instance=ExtResource("7_t74u0")]
+[node name="SimpleGate4" parent="GateGroups" instance=ExtResource("7_t74u0")]
 position = Vector2(29, 91)
 off_Sprite = SubResource("AtlasTexture_5dlud")
-connected_Switch = [NodePath("../../SwitchGroups/Hit_Switch")]
 
 [node name="interectableGroups" type="Node" parent="."]
 

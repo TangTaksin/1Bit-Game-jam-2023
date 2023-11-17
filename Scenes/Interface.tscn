@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://be46finlr4h25"]
+[gd_scene load_steps=15 format=3 uid="uid://be46finlr4h25"]
 
 [ext_resource type="Script" path="res://Scripts/Interface.gd" id="1_vf4us"]
 [ext_resource type="Texture2D" uid="uid://dtkb027gusf5e" path="res://Asset Pack 1-bit/Items/bow.tres" id="4_c35yu"]
@@ -12,6 +12,11 @@
 [ext_resource type="Texture2D" uid="uid://di0bu6lsfbweh" path="res://Sprites/1bit 16px patterns and tiles.png" id="11_5pqxn"]
 [ext_resource type="AudioStream" uid="uid://dnqbtibltnx2y" path="res://Audio/SFX/inventory.wav" id="11_kwpc4"]
 [ext_resource type="AudioStream" uid="uid://b3vgcdb2vnypr" path="res://Audio/SFX/ui.wav" id="12_0dly8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_46gr7"]
+line_spacing = -8.0
+font_size = 23
+font_color = Color(0.109804, 0.109804, 0.109804, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_qdxi2"]
 font = ExtResource("5_cusbm")
@@ -106,7 +111,7 @@ patch_margin_top = 2
 patch_margin_right = 2
 patch_margin_bottom = 2
 
-[node name="ItemIcon8" type="TextureRect" parent="Panel/Panel_Info"]
+[node name="Info_Sprite" type="TextureRect" parent="Panel/Panel_Info"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = -1
@@ -141,7 +146,7 @@ grow_vertical = 2
 texture = ExtResource("11_5pqxn")
 region_rect = Rect2(377, 217, 46, 46)
 
-[node name="Label" type="Label" parent="Panel/Panel_Info"]
+[node name="Info_Name" type="Label" parent="Panel/Panel_Info"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 10
@@ -156,7 +161,7 @@ text = "NAME"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="Panel/Panel_Info"]
+[node name="Info_Desc" type="Label" parent="Panel/Panel_Info"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 15
@@ -168,7 +173,13 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("5_cusbm")
 theme_override_font_sizes/font_size = 26
-text = "DESCRIPTION"
+text = "aaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaa"
+label_settings = SubResource("LabelSettings_46gr7")
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -255,6 +266,7 @@ pivot_offset = Vector2(24, 24)
 texture = ExtResource("9_qsjfa")
 
 [node name="ItemIcon7" type="TextureRect" parent="Panel"]
+visible = false
 texture_filter = 1
 layout_mode = 0
 offset_left = 146.5
@@ -265,6 +277,7 @@ pivot_offset = Vector2(24, 24)
 texture = ExtResource("10_52frp")
 
 [node name="ItemIcon8" type="TextureRect" parent="Panel"]
+visible = false
 texture_filter = 1
 layout_mode = 0
 offset_left = 206.5

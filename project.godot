@@ -86,6 +86,7 @@ run={
 2d_physics/layer_4="arrow"
 2d_physics/layer_5="spike"
 2d_physics/layer_6="water"
+2d_physics/layer_7="button"
 
 [rendering]
 

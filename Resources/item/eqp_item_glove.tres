@@ -1,9 +1,15 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bk7pjefu2apm3"]
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://bk7pjefu2apm3"]
 
 [ext_resource type="Texture2D" uid="uid://cs6tp5ufl0nje" path="res://Asset Pack 1-bit/Items/gloves.tres" id="1_8hg2r"]
+[ext_resource type="Texture2D" uid="uid://dl308ymcwr03" path="res://Sprites/glove_disable.png" id="2_7aluh"]
 [ext_resource type="Script" path="res://Scripts/Items/Item.gd" id="2_kkikn"]
 
 [resource]
 script = ExtResource("2_kkikn")
-itemname = "Hammer"
+itemname = "Enchanted Gloves"
+itemname_disable = "Disabled"
 image = ExtResource("1_8hg2r")
+image_disable = ExtResource("2_7aluh")
+description = "An enchanted pair of gloves. It allow you to lift things up by interacting with it."
+description_disable = "Something about this place is suppressing the gloves' enchantment! Looks like you won't be able to lift things for a while."
+item_disabled = false

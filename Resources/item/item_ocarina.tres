@@ -6,4 +6,8 @@
 [resource]
 script = ExtResource("2_yihq6")
 itemname = "Bow"
+itemname_disable = ""
 image = ExtResource("1_nkra6")
+description = ""
+description_disable = ""
+item_disabled = false
