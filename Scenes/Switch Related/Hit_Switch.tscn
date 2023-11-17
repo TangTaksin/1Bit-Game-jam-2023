@@ -25,7 +25,6 @@ collision_priority = 2.0
 script = ExtResource("1_nrijn")
 on_Sprite = ExtResource("2_xn2br")
 off_Sprite = ExtResource("3_26jh5")
-switchIsOn = true
 
 [node name="switch_sprite" type="Sprite2D" parent="."]
 z_index = 2

@@ -6,6 +6,8 @@ extends Switch_Activated
 @onready var gateSprite := $GateSprite
 @onready var collision : CollisionShape2D = $GateStaticBody/CollisionShape2D
 
+
+
 func state_check() :
 	if isActivated :
 		gateSprite.texture = on_Sprite

@@ -1064,6 +1064,7 @@ default_state = true
 position = Vector2(29, 91)
 off_Sprite = SubResource("AtlasTexture_5dlud")
 connected_Switch = [NodePath("../../SwitchGroups/Hit_Switch")]
+default_state = true
 
 [node name="interectableGroups" type="Node" parent="."]
 

@@ -12,9 +12,11 @@ func _ready() -> void:
 		for switch in connected_Switch:
 			switch.switchToggle.connect(toggle_state)
 	_on_ready()
+	
 
 #additional function in case you what to add something to _ready() in the inherited class
 func _on_ready():
+	isActivated = default_state
 	state_check()
 	pass
 

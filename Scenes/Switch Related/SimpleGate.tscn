@@ -1,8 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://baktvg0711cqy"]
+[gd_scene load_steps=7 format=3 uid="uid://baktvg0711cqy"]
 
 [ext_resource type="Script" path="res://Scripts/Switch Related/Gate.gd" id="1_lh7hv"]
 [ext_resource type="Texture2D" uid="uid://g5lg8x6c8xdm" path="res://Asset Pack 1-bit/Items/gate_off.tres" id="2_73634"]
 [ext_resource type="Texture2D" uid="uid://qklggrj3dk5q" path="res://Asset Pack 1-bit/Items/gate_on.tres" id="2_jkxa4"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3mcmo"]
+load_path = "res://.godot/imported/1Bit_Tilesets.png-c91e004e0dab8d76ab2078650b0b2807.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ckk0h"]
+atlas = SubResource("CompressedTexture2D_3mcmo")
+region = Rect2(16, 80, 16, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c672x"]
 size = Vector2(16, 16)
@@ -11,11 +18,10 @@ size = Vector2(16, 16)
 script = ExtResource("1_lh7hv")
 on_Sprite = ExtResource("2_jkxa4")
 off_Sprite = ExtResource("2_73634")
-default_state = true
 
 [node name="GateSprite" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("2_jkxa4")
+texture = SubResource("AtlasTexture_ckk0h")
 
 [node name="GateStaticBody" type="StaticBody2D" parent="."]
 collision_layer = 4
