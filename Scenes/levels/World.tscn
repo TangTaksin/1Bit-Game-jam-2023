@@ -9,8 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://baktvg0711cqy" path="res://Scenes/Switch Related/SimpleGate.tscn" id="7_20no8"]
 [ext_resource type="PackedScene" uid="uid://tsj004j75gfg" path="res://Asset Pack 1-bit/porps/pot.tscn" id="8_kg6i0"]
 [ext_resource type="PackedScene" uid="uid://dh6o3r4l85phj" path="res://Scenes/Breakable.tscn" id="9_psjki"]
-[ext_resource type="AudioStream" uid="uid://jyoqcneqkdxm" path="res://Audio/Music/668630__beetlemuse__bachs-prelude-in-c-chiptune.wav" id="10_c8vhg"]
 [ext_resource type="PackedScene" uid="uid://bagk5c1wyonxx" path="res://Scenes/Magic_Floor.tscn" id="11_0flly"]
+[ext_resource type="AudioStream" uid="uid://kj8eidxjma7q" path="res://Audio/Music/Music.wav" id="11_42vdb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o7tla"]
 texture = ExtResource("3_7rh4o")
@@ -935,7 +935,6 @@ collision_mask = 0
 polygon = PackedVector2Array(6, -4, 519, 2, 522, 48, 527, 48, 527, 26, 546, 26, 545, 48, 548, 48, 548, 1, 634, 2, 631, 367, 82, 364, 82, 393, 44, 393, 46, 363, 7, 363, 9, -3, -18, 395, 486, 405, 667, 394, 658, -18, 230, -20, 6, -13)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="Interface" parent="CanvasLayer" instance=ExtResource("4_upevr")]
 offset_left = -1.0
@@ -1101,9 +1100,10 @@ position = Vector2(24, 172)
 [node name="Magic_Floor4" parent="waterGroups" instance=ExtResource("11_0flly")]
 position = Vector2(40, 172)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("10_c8vhg")
-volume_db = -20.0
+[node name="BGMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_42vdb")
+volume_db = -15.627
+autoplay = true
 bus = &"Music"
 
 [node name="Door_transition" type="Area2D" parent="."]

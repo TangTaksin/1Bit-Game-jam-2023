@@ -28,22 +28,23 @@ var stamina: float = MAX_STAMINA
 @onready var anim_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var interaction_area: Area2D = $InteractionArea
 @onready var audio_player = $AudioStreamPlayer
+@onready var audio_walkSFX = $walkSFX
 
 func _physics_process(delta: float) -> void:
 	if ! inventory.invIsUp and CanAct:
 		handle_movement(delta)
 		handle_animation()
-	
+
 	handle_interaction()
 	handle_inventory()
-	
-	if  Input.is_action_pressed("run") and stamina > 0:
+
+	if Input.is_action_pressed("run") and stamina > 0:
 		speed = run_speed
 		stamina -= delta * 20
 		if stamina < 0:
 			stamina = 0
 		print(stamina)
-	else :
+	else:
 		speed = 80
 		stamina = min(stamina + delta * 5, MAX_STAMINA)
 		print(stamina)
@@ -62,15 +63,17 @@ func handle_movement(delta):
 			velocity = velocity.move_toward(Vector2.ZERO, deacceleration * delta)
 		else:
 			velocity = velocity.move_toward(direction * speed, acceleration * delta)
+			
 	else:
 		velocity = new_direction * speed
-	
+
 	if new_direction.length() > 0.0:
 		playerFacing = new_direction
 
 func handle_animation():
 	if playerFacing == Vector2.LEFT:
 		if velocity.length() > 0:
+			play_walking_sfx()
 			anim_sprite.animation = "walk_side"
 			anim_sprite.flip_h = true
 		else:
@@ -78,6 +81,7 @@ func handle_animation():
 			anim_sprite.flip_h = true
 	if playerFacing == Vector2.RIGHT:
 		if velocity.length() > 0:
+			play_walking_sfx()
 			anim_sprite.animation = "walk_side"
 			anim_sprite.flip_h = false
 		else:
@@ -85,14 +89,20 @@ func handle_animation():
 			anim_sprite.flip_h = false
 	if playerFacing == Vector2.UP:
 		if velocity.length() > 0:
+			play_walking_sfx()
 			anim_sprite.animation = "walk_up"
 		else:
 			anim_sprite.animation = "idle_up"
 	if playerFacing == Vector2.DOWN:
 		if velocity.length() > 0:
+			play_walking_sfx()
 			anim_sprite.animation = "walk_down"
 		else:
 			anim_sprite.animation = "idle_down"
+
+func play_walking_sfx():
+	if !audio_walkSFX.is_playing():
+		audio_walkSFX.play()
 
 func handle_interaction():
 	if carried_item != null:
@@ -174,13 +184,13 @@ func drop_item():
 func use_item(dir: Vector2):
 	var item = inventory.itemList[inventory.currentItemIndex].use(dir)
 	var prefab
-	
+
 	if item != null:
 		prefab = item[0]
 		if item[1] == false:
 			prefab.position = global_position
 			get_parent().add_child(prefab)
-		else :
+		else:
 			add_child(prefab)
 	pass
 
