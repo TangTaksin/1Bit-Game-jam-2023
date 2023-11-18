@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/levels/1/level_1.gd" id="1_5u4vg"]
 [ext_resource type="Texture2D" uid="uid://cags46glknww2" path="res://Asset Pack 1-bit/Tilesets/1Bit_Tilesets.png" id="2_ir71u"]
-[ext_resource type="PackedScene" uid="uid://c8jiqst6edjxb" path="res://Scenes/Player.tscn" id="3_vug0l"]
+[ext_resource type="PackedScene" uid="uid://c8jiqst6edjxb" path="res://Scenes/player.tscn" id="3_vug0l"]
 [ext_resource type="PackedScene" uid="uid://be46finlr4h25" path="res://Scenes/Interface.tscn" id="4_840bx"]
 [ext_resource type="PackedScene" uid="uid://yppt2ey0tgqv" path="res://Scenes/Switch Related/Hit_Switch.tscn" id="5_e6pv8"]
 [ext_resource type="PackedScene" uid="uid://blaugecl075wf" path="res://Scenes/Switch Related/Floor_Switch.tscn" id="6_10dt7"]
@@ -990,6 +990,10 @@ layer_0/tile_data = PackedInt32Array(655372, 131073, 2, 720908, 131073, 2, -2621
 
 [node name="Player" parent="." instance=ExtResource("3_vug0l")]
 position = Vector2(70, 339)
+run_speed = 120.0
+has_acceleration = false
+acceleration = 1000
+deacceleration = 1000
 
 [node name="LimitPlayer" type="StaticBody2D" parent="."]
 collision_layer = 4

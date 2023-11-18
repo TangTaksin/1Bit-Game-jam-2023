@@ -2,10 +2,15 @@ extends Node2D
 
 
 @onready var ui = $Control
-# Called when the node enters the scene tree for the first time.
+@onready var invRes : Inventory = preload("res://Resources/inventory.tres")
+
+@export var disableGlove : bool
+@export var disableBoot : bool
+
 func _ready() -> void:
+	invRes.set_item_disable(4, disableGlove)
+	invRes.set_item_disable(5, disableBoot)
 	ui.hide()
-	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
