@@ -1,15 +1,16 @@
 [gd_resource type="Resource" load_steps=4 format=3 uid="uid://cwab2mvven5qy"]
 
 [ext_resource type="Texture2D" uid="uid://dtkb027gusf5e" path="res://Asset Pack 1-bit/Items/bow.tres" id="1_n03vt"]
+[ext_resource type="Texture2D" uid="uid://chx4yjjinng6u" path="res://Sprites/bow_disable.png" id="2_6yull"]
 [ext_resource type="Script" path="res://Scripts/Items/Item_Bow.gd" id="2_8ruvb"]
 [ext_resource type="Texture2D" uid="uid://chx4yjjinng6u" path="res://Sprites/bow_disable.png" id="2_kitlu"]
 
 [resource]
 script = ExtResource("2_8ruvb")
 itemname = "Magic Bow"
-itemname_disable = ""
+itemname_disable = "Returned"
 image = ExtResource("1_n03vt")
-image_disable = ExtResource("2_kitlu")
-description = "\"A magical bow, Contain unending supplies of arrows. Can activated switches.\""
-description_disable = "\"A magical bow, Now back in its rightful place.\""
+image_disable = ExtResource("2_6yull")
+description = "A magic bow, contain unending supplies  of arrows. you can activate switches with it."
+description_disable = "A magic bow, now back in its rightful place."
 item_disabled = false

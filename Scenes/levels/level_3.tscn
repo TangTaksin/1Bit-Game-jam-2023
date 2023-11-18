@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://d3p8l1868826h" path="res://Scenes/levels/World.tres" id="1_cy3h3"]
 [ext_resource type="Script" path="res://Scenes/levels/level_3.gd" id="1_qcame"]
-[ext_resource type="PackedScene" uid="uid://c8jiqst6edjxb" path="res://Scenes/player.tscn" id="1_u0eis"]
+[ext_resource type="PackedScene" uid="uid://c8jiqst6edjxb" path="res://Scenes/Player.tscn" id="1_u0eis"]
 [ext_resource type="Texture2D" uid="uid://cags46glknww2" path="res://Asset Pack 1-bit/Tilesets/1Bit_Tilesets.png" id="2_l1sm4"]
 [ext_resource type="PackedScene" uid="uid://baktvg0711cqy" path="res://Scenes/Switch Related/SimpleGate.tscn" id="3_kx6ws"]
 [ext_resource type="PackedScene" uid="uid://yppt2ey0tgqv" path="res://Scenes/Switch Related/Hit_Switch.tscn" id="4_7tfgl"]

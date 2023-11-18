@@ -1,13 +1,15 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cekjtwolgehp4"]
+[gd_resource type="Resource" script_class="Item" load_steps=4 format=3 uid="uid://cekjtwolgehp4"]
 
 [ext_resource type="Texture2D" uid="uid://bmijqkocp4w4e" path="res://Asset Pack 1-bit/Items/shoe.tres" id="1_ii5l6"]
 [ext_resource type="Script" path="res://Scripts/Items/Item.gd" id="2_a0ocf"]
+[ext_resource type="Texture2D" uid="uid://baki05jrovp14" path="res://Sprites/shoe_disable.png" id="2_vm4p1"]
 
 [resource]
 script = ExtResource("2_a0ocf")
 itemname = "Enchanted Boot"
-itemname_disable = ""
+itemname_disable = "Disabled"
 image = ExtResource("1_ii5l6")
-description = "\"An enchanted pair of Boots.  It allow you to go faster fast by pressing the [Shift key].\""
-description_disable = "\"Something about this place is suppressing the boots' enchantment! Looks like you won't be able to go faster for a while.\""
+image_disable = ExtResource("2_vm4p1")
+description = "A pair of enchanted boot. it allows you to go faster by pressing [SHIFT]."
+description_disable = "Something about this place is suppressing the gloves' enchantment! Looks like you won't be "
 item_disabled = false

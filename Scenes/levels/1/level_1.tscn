@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/levels/1/level_1.gd" id="1_5u4vg"]
 [ext_resource type="Texture2D" uid="uid://cags46glknww2" path="res://Asset Pack 1-bit/Tilesets/1Bit_Tilesets.png" id="2_ir71u"]
-[ext_resource type="PackedScene" uid="uid://c8jiqst6edjxb" path="res://Scenes/player.tscn" id="3_vug0l"]
+[ext_resource type="PackedScene" uid="uid://c8jiqst6edjxb" path="res://Scenes/Player.tscn" id="3_vug0l"]
 [ext_resource type="PackedScene" uid="uid://be46finlr4h25" path="res://Scenes/Interface.tscn" id="4_840bx"]
 [ext_resource type="PackedScene" uid="uid://yppt2ey0tgqv" path="res://Scenes/Switch Related/Hit_Switch.tscn" id="5_e6pv8"]
 [ext_resource type="PackedScene" uid="uid://blaugecl075wf" path="res://Scenes/Switch Related/Floor_Switch.tscn" id="6_10dt7"]
@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dh6o3r4l85phj" path="res://Scenes/Breakable.tscn" id="9_l2kpn"]
 [ext_resource type="PackedScene" uid="uid://bagk5c1wyonxx" path="res://Scenes/Magic_Floor.tscn" id="10_je7oo"]
 [ext_resource type="AudioStream" uid="uid://kj8eidxjma7q" path="res://Audio/Music/Music.wav" id="11_rd7ai"]
-[ext_resource type="PackedScene" path="res://Scenes/Chest.tscn" id="12_llahp"]
+[ext_resource type="PackedScene" uid="uid://dyjgl7iy6ahja" path="res://Scenes/Chest.tscn" id="12_llahp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_35kqd"]
 texture = ExtResource("2_ir71u")

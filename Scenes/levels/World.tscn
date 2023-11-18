@@ -1,7 +1,7 @@
 [gd_scene load_steps=18 format=3 uid="uid://dgyi8xfd56ild"]
 
 [ext_resource type="Script" path="res://Scripts/World.gd" id="1_jxcht"]
-[ext_resource type="PackedScene" uid="uid://c8jiqst6edjxb" path="res://Scenes/player.tscn" id="2_7hwik"]
+[ext_resource type="PackedScene" uid="uid://c8jiqst6edjxb" path="res://Scenes/Player.tscn" id="2_7hwik"]
 [ext_resource type="Texture2D" uid="uid://cags46glknww2" path="res://Asset Pack 1-bit/Tilesets/1Bit_Tilesets.png" id="3_7rh4o"]
 [ext_resource type="TileSet" uid="uid://d3p8l1868826h" path="res://Scenes/levels/World.tres" id="3_m0k82"]
 [ext_resource type="PackedScene" uid="uid://be46finlr4h25" path="res://Scenes/Interface.tscn" id="4_upevr"]
@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dh6o3r4l85phj" path="res://Scenes/Breakable.tscn" id="9_psjki"]
 [ext_resource type="PackedScene" uid="uid://bagk5c1wyonxx" path="res://Scenes/Magic_Floor.tscn" id="11_0flly"]
 [ext_resource type="AudioStream" uid="uid://kj8eidxjma7q" path="res://Audio/Music/Music.wav" id="11_42vdb"]
-[ext_resource type="PackedScene" path="res://Scenes/Chest.tscn" id="13_2ayfo"]
+[ext_resource type="PackedScene" uid="uid://dyjgl7iy6ahja" path="res://Scenes/Chest.tscn" id="13_2ayfo"]
 [ext_resource type="FontFile" uid="uid://v63l0o8gdn7v" path="res://Asset Pack 1-bit/Font/2005_iannnnnAMD.ttf" id="14_nlopp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3grh8"]

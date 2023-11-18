@@ -34,6 +34,12 @@ func _ready() -> void:
 	if direction.x > 0 and direction.y > 0 : #DownRight
 		sprite.texture = diagdown_sprite
 		sprite.set_flip_h(true)
+	if direction.x < 0 and direction.y < 0 : #UpLeft
+		sprite.texture = diagup_sprite
+		sprite.set_flip_h(false)
+	if direction.x < 0 and direction.y > 0 : #DownLeft
+		sprite.texture = diagdown_sprite
+		sprite.set_flip_h(false)
 
 func _on_timer_timeout() -> void:
 	queue_free()
