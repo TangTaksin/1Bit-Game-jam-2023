@@ -485,10 +485,6 @@ layer_0/tile_data = PackedInt32Array(720901, 131072, 2, 720912, 131072, 2, 65536
 
 [node name="Player" parent="." instance=ExtResource("1_u0eis")]
 position = Vector2(339, 341)
-run_speed = 120.0
-has_acceleration = false
-acceleration = 1000
-deacceleration = 1000
 
 [node name="LimitPlayer" type="StaticBody2D" parent="."]
 position = Vector2(0, 43)

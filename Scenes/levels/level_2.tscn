@@ -531,10 +531,6 @@ layer_1/tile_data = PackedInt32Array(327704, 983040, 1, 393240, 983040, 1, 45877
 
 [node name="Player" parent="." instance=ExtResource("1_yptoq")]
 position = Vector2(312, 305)
-run_speed = 120.0
-has_acceleration = false
-acceleration = 1000
-deacceleration = 1000
 
 [node name="LimitPlayer" type="StaticBody2D" parent="."]
 collision_layer = 4
@@ -609,6 +605,6 @@ offset_left = 1.0
 offset_top = 12.0
 offset_right = 1.0
 offset_bottom = 12.0
-itemIcons = [null, null, null, null, null, null, null, null]
+itemIcons = [NodePath("Panel/ItemIcon"), NodePath("Panel/ItemIcon2"), NodePath("Panel/ItemIcon3"), NodePath("Panel/ItemIcon4"), NodePath("Panel/ItemIcon5"), NodePath("Panel/ItemIcon6")]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
