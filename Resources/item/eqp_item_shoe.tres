@@ -6,4 +6,8 @@
 [resource]
 script = ExtResource("2_a0ocf")
 itemname = "Enchanted Boot"
+itemname_disable = ""
 image = ExtResource("1_ii5l6")
+description = "\"An enchanted pair of Boots.  It allow you to go faster fast by pressing the [Shift key].\""
+description_disable = "\"Something about this place is suppressing the boots' enchantment! Looks like you won't be able to go faster for a while.\""
+item_disabled = false

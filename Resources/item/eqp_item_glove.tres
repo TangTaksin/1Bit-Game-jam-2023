@@ -6,4 +6,8 @@
 [resource]
 script = ExtResource("2_kkikn")
 itemname = "Enchanted Gloves"
+itemname_disable = ""
 image = ExtResource("1_8hg2r")
+description = "\"An enchanted pair of gloves. It allow you to lift things up by interacting with it.\""
+description_disable = "\"Something about this place is suppressing the gloves' enchantment! Looks like you won't be able to lift things for a while.\""
+item_disabled = false
