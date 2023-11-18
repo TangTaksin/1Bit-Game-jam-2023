@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dgyi8xfd56ild"]
+[gd_scene load_steps=18 format=3 uid="uid://dgyi8xfd56ild"]
 
 [ext_resource type="Script" path="res://Scripts/World.gd" id="1_jxcht"]
 [ext_resource type="PackedScene" uid="uid://c8jiqst6edjxb" path="res://Scenes/player.tscn" id="2_7hwik"]
@@ -12,7 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://dh6o3r4l85phj" path="res://Scenes/Breakable.tscn" id="9_psjki"]
 [ext_resource type="PackedScene" uid="uid://bagk5c1wyonxx" path="res://Scenes/Magic_Floor.tscn" id="11_0flly"]
 [ext_resource type="AudioStream" uid="uid://kj8eidxjma7q" path="res://Audio/Music/Music.wav" id="11_42vdb"]
-[ext_resource type="PackedScene" uid="uid://dyjgl7iy6ahja" path="res://Scenes/Chest.tscn" id="13_offbt"]
+[ext_resource type="PackedScene" path="res://Scenes/Chest.tscn" id="13_2ayfo"]
+[ext_resource type="FontFile" uid="uid://v63l0o8gdn7v" path="res://Asset Pack 1-bit/Font/2005_iannnnnAMD.ttf" id="14_nlopp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3grh8"]
 texture = ExtResource("3_7rh4o")
@@ -458,8 +459,8 @@ size = Vector2(14, 19)
 script = ExtResource("1_jxcht")
 
 [node name="Player" parent="." instance=ExtResource("2_7hwik")]
-position = Vector2(590, 98)
-speed = 80.0
+position = Vector2(66, 338)
+speed = null
 has_acceleration = true
 acceleration = 700
 deacceleration = 500
@@ -596,7 +597,8 @@ default_state = true
 [node name="interectableGroups" type="Node" parent="."]
 
 [node name="pot" parent="interectableGroups" instance=ExtResource("8_kg6i0")]
-position = Vector2(95, 302)
+position = Vector2(102, 285)
+collision_mask = 1
 
 [node name="pot4" parent="interectableGroups" instance=ExtResource("8_kg6i0")]
 position = Vector2(279, 74)
@@ -675,11 +677,24 @@ bus = &"Music"
 position = Vector2(64, 365)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door_transition"]
-position = Vector2(472, -326)
+position = Vector2(472, -330)
 shape = SubResource("RectangleShape2D_yv5s7")
 
-[node name="Chest" parent="." instance=ExtResource("13_offbt")]
-position = Vector2(536, 56)
+[node name="Chest" parent="." instance=ExtResource("13_2ayfo")]
+position = Vector2(536, 61)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 19.0
+offset_top = 244.0
+offset_right = 94.0
+offset_bottom = 312.0
+theme_override_fonts/font = ExtResource("14_nlopp")
+text = "WASD: Move
+Tab: Inventory
+E: Interect
+Space bar: Use Item"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="body_entered" from="Door_transition" to="." method="_on_door_transition_body_entered"]
 [connection signal="body_exited" from="Door_transition" to="." method="_on_door_transition_body_exited"]

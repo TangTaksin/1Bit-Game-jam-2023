@@ -1,15 +1,9 @@
-[gd_resource type="Resource" script_class="Item_Wing" load_steps=4 format=3 uid="uid://dncdpjj0khok4"]
+[gd_resource type="Resource" script_class="Item_wing" load_steps=3 format=3 uid="uid://dncdpjj0khok4"]
 
 [ext_resource type="Texture2D" uid="uid://d2v1xejt8uumf" path="res://Asset Pack 1-bit/Items/wing.tres" id="1_0dx7i"]
 [ext_resource type="Script" path="res://Scripts/Items/Item_Wing.gd" id="2_asrht"]
-[ext_resource type="Texture2D" uid="uid://cvg75cq0tinxq" path="res://Sprites/wing_disable.png" id="2_ng1p4"]
 
 [resource]
 script = ExtResource("2_asrht")
 itemname = "Magic Wing"
-itemname_disable = "Returned"
 image = ExtResource("1_0dx7i")
-image_disable = ExtResource("2_ng1p4")
-description = "A pair of Magical Wings. It allow user to float over untraversable surfaces or obstacles."
-description_disable = "A pair of Magic Wings, Now back in its rightful place."
-item_disabled = false

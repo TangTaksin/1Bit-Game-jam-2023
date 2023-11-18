@@ -1,15 +1,9 @@
-[gd_resource type="Resource" load_steps=4 format=3 uid="uid://6pexfa3lsr2u"]
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://6pexfa3lsr2u"]
 
 [ext_resource type="Texture2D" uid="uid://b5gxl7yuhs3jg" path="res://Asset Pack 1-bit/Items/hammer.tres" id="1_cb4d7"]
 [ext_resource type="Script" path="res://Scripts/Items/Item_Hammer.gd" id="2_38ou7"]
-[ext_resource type="Texture2D" uid="uid://chwrwhrkktav0" path="res://Sprites/hammer_disable.png" id="2_sty3o"]
 
 [resource]
 script = ExtResource("2_38ou7")
 itemname = "Magic Hammer"
-itemname_disable = "Returned"
 image = ExtResource("1_cb4d7")
-image_disable = ExtResource("2_sty3o")
-description = "A Magic Hammer. You can crush certain stuffs with it. It can also activate switches."
-description_disable = "A magic hammer, Now back in its rightful place."
-item_disabled = false

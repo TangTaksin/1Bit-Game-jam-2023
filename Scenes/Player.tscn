@@ -164,6 +164,10 @@ collision_mask = 54
 collision_priority = 2.0
 script = ExtResource("1_4cn0g")
 speed = 100.0
+run_speed = null
+has_acceleration = null
+acceleration = null
+deacceleration = null
 inventory = ExtResource("2_twces")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -200,6 +204,7 @@ shape = SubResource("RectangleShape2D_0ryj0")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_m1jnc")
+volume_db = -15.0
 bus = &"SFX"
 
 [node name="walkSFX" type="AudioStreamPlayer" parent="."]

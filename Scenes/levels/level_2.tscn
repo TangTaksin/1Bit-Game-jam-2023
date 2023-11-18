@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bhvqbgo86qjtj"]
+[gd_scene load_steps=10 format=3 uid="uid://bhvqbgo86qjtj"]
 
 [ext_resource type="Script" path="res://Scenes/levels/level_2.gd" id="1_cwrge"]
 [ext_resource type="Texture2D" uid="uid://cags46glknww2" path="res://Asset Pack 1-bit/Tilesets/1Bit_Tilesets.png" id="1_hohar"]
 [ext_resource type="PackedScene" uid="uid://c8jiqst6edjxb" path="res://Scenes/player.tscn" id="1_yptoq"]
 [ext_resource type="FontFile" uid="uid://v63l0o8gdn7v" path="res://Asset Pack 1-bit/Font/2005_iannnnnAMD.ttf" id="3_tky3m"]
 [ext_resource type="AudioStream" uid="uid://kj8eidxjma7q" path="res://Audio/Music/Music.wav" id="5_sqmmt"]
+[ext_resource type="PackedScene" path="res://Scenes/Chest.tscn" id="6_ndpii"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1hx21"]
 texture = ExtResource("1_hohar")
@@ -525,7 +526,6 @@ layer_1/tile_data = PackedInt32Array(589843, 720896, 7, 1310725, 262144, 5)
 position = Vector2(70, 321)
 
 [node name="LimitPlayer" type="StaticBody2D" parent="."]
-visible = false
 collision_layer = 4
 collision_mask = 0
 
@@ -575,5 +575,9 @@ stream = ExtResource("5_sqmmt")
 volume_db = -15.0
 autoplay = true
 bus = &"Music"
+
+[node name="Chest" parent="." instance=ExtResource("6_ndpii")]
+position = Vector2(328, 153)
+item_to_returned = 2
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

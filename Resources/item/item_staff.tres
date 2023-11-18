@@ -1,15 +1,9 @@
-[gd_resource type="Resource" load_steps=4 format=3 uid="uid://bwkut3y6n2isp"]
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bwkut3y6n2isp"]
 
 [ext_resource type="Script" path="res://Scripts/Items/Item_Stave.gd" id="1_27k8k"]
 [ext_resource type="Texture2D" uid="uid://bcnqo1kk33yxb" path="res://Asset Pack 1-bit/Items/staff.tres" id="1_i77w5"]
-[ext_resource type="Texture2D" uid="uid://di8v5haqh5hhh" path="res://Sprites/staff_disable.png" id="2_w6jad"]
 
 [resource]
 script = ExtResource("1_27k8k")
 itemname = "Magic Staff"
-itemname_disable = "Returned"
 image = ExtResource("1_i77w5")
-image_disable = ExtResource("2_w6jad")
-description = "A Magic Staff, Its short-ranged spell can make certain surface walkable. It can also activate switches."
-description_disable = "A magic staff, Now back in it's rightful place."
-item_disabled = false
