@@ -197,6 +197,7 @@ position = Vector2(0, 3.5)
 shape = SubResource("RectangleShape2D_0ryj0")
 
 [node name="ActionCoolDown" type="Timer" parent="."]
+wait_time = 0.25
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_m1jnc")
